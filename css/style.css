@@ -1,0 +1,38 @@
+body{
+width:479px;
+line-height:1.7;
+margin:0;
+padding:0;
+background-color:#FFFAF0;
+}
+
+h1{
+font-size:40px;
+
+}
+
+.width-max{
+width:479px;
+background-color:green;
+
+}
+
+.logo{
+      float:left;
+      width:95px;
+      height:65px;
+      background:#89ABD9;
+	  margin-top:25px;
+	  margin-left:20px;
+	  margin-right:20px;
+	  margin-bottom:25px;
+	  text-align:center;
+      }
+
+.title{
+      float:left;
+	  margin-left:20px;
+	  margin-right:20px;
+	  margin-bottom:25px;
+	  text-align:center;
+      }
