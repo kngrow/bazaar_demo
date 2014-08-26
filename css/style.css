@@ -1,27 +1,25 @@
 body{
-width:479px;
-line-height:1.7;
-margin:0;
-padding:0;
-background-color:#FFFAF0;
+		width:479px;
+		line-height:1.7;
+		margin:0;
+		padding:0;
+		background-color:#FFFAF0;
 }
 
 h1{
-font-size:40px;
-
+		font-size:40px;
 }
 
 .width-max{
-width:479px;
-background-color:green;
-
+			width:479px;
+			background-color:green;
 }
 
 .logo{
       float:left;
       width:95px;
       height:65px;
-      background:#89ABD9;
+      background-color:#89ABD9;
 	  margin-top:25px;
 	  margin-left:20px;
 	  margin-right:20px;
@@ -36,3 +34,11 @@ background-color:green;
 	  margin-bottom:25px;
 	  text-align:center;
       }
+	  
+.goods{
+		width:430px;
+		height:200px;
+		margin-left:20px;
+		margin-right:20px;
+		background-color:#FEF898;
+}
