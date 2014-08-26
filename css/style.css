@@ -10,11 +10,6 @@ h1{
 		font-size:40px;
 }
 
-.width-max{
-			width:479px;
-			background-color:green;
-}
-
 .logo{
       float:left;
       width:95px;
@@ -24,8 +19,14 @@ h1{
 	  margin-left:20px;
 	  margin-right:20px;
 	  margin-bottom:25px;
-	  text-align:center;
       }
+	  
+.logo span{
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			line-height:65px;
+}
 
 .title{
       float:left;
@@ -41,4 +42,59 @@ h1{
 		margin-left:20px;
 		margin-right:20px;
 		background-color:#FEF898;
+}
+
+.goods span{
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			line-height:50px;
+			font-size:30px;
+}
+
+.category{
+			float:left;
+			width:205px;
+			height:100px;
+			margin-top:10px;
+			margin-left:20px;
+			margin-bottom:10px;
+			background-color:#F29BA1;
+}
+
+.category span{
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			line-height:100px;
+}
+
+.info{
+		width:430px;
+		height:120px;
+		margin-left:20px;
+		margin-right:20px;
+		background-color:#D5D7D6;
+}
+
+.info span{
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			line-height:0px;
+			font-size:30px;
+}
+
+.link{
+		width:479px;
+		height:130px;
+		background-color:#CCE299;
+}
+
+.link span{
+			display:inline-block;
+			width:100%;
+			text-align:center;
+			line-height:100px;
+			font-size:30px;
 }
