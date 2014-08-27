@@ -1,5 +1,8 @@
+
+@media screen and (min-width:480px){
+
 body{
-		width:479px;
+		width:100%;
 		line-height:1.7;
 		margin:0;
 		padding:0;
@@ -7,40 +10,36 @@ body{
 }
 
 h1{
-		font-size:40px;
+		font-size:150%;
 }
 
 .logo{
       float:left;
-      width:95px;
-      height:65px;
+      width:7%;
+      height:15%;
+	  margin-top:1%;
+	  margin-left:1%;
       background-color:#89ABD9;
-	  margin-top:25px;
-	  margin-left:20px;
-	  margin-right:20px;
-	  margin-bottom:25px;
       }
 	  
 .logo span{
 			display:inline-block;
 			width:100%;
 			text-align:center;
-			line-height:65px;
+			line-height:13.5%;
 }
 
 .title{
       float:left;
-	  margin-left:20px;
-	  margin-right:20px;
-	  margin-bottom:25px;
 	  text-align:center;
+	  margin-top:-1%;
+	  margin-left:2%;
       }
 	  
 .goods{
-		width:430px;
-		height:200px;
-		margin-left:20px;
-		margin-right:20px;
+		width:31%;
+		height:41.7%;
+		margin-left:1%;
 		background-color:#FEF898;
 }
 
@@ -48,17 +47,16 @@ h1{
 			display:inline-block;
 			width:100%;
 			text-align:center;
-			line-height:50px;
-			font-size:30px;
+			line-height:10.4%;
+			font-size:200%;
 }
 
 .category{
 			float:left;
-			width:205px;
-			height:100px;
-			margin-top:10px;
-			margin-left:20px;
-			margin-bottom:10px;
+			width:14%;
+			height:20.8%;
+			margin-left:1%;
+			margin-right:1%;
 			background-color:#F29BA1;
 }
 
@@ -66,14 +64,13 @@ h1{
 			display:inline-block;
 			width:100%;
 			text-align:center;
-			line-height:100px;
+			line-height:20.8%;
 }
 
 .info{
-		width:430px;
-		height:120px;
-		margin-left:20px;
-		margin-right:20px;
+		width:31%;
+		height:25%;
+		margin-left:1%;
 		background-color:#D5D7D6;
 }
 
@@ -81,13 +78,13 @@ h1{
 			display:inline-block;
 			width:100%;
 			text-align:center;
-			line-height:0px;
-			font-size:30px;
+			line-height:0%;
+			font-size:200%;
 }
 
 .link{
-		width:479px;
-		height:130px;
+		width:35%;
+		height:27.1%;
 		background-color:#CCE299;
 }
 
@@ -95,12 +92,14 @@ h1{
 			display:inline-block;
 			width:100%;
 			text-align:center;
-			line-height:100px;
-			font-size:30px;
+			line-height:20.8%;
+			font-size:200;
 }
 
 small {
 		display:inline-block;
 		width:100%;
 		text-align:center;
+}
+
 }
