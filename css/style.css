@@ -1,5 +1,7 @@
+@media screen and (max-width:480px){
 
 body{
+width:100%;
 line-height:1.5;
 margin:0;
 padding:0;
@@ -14,19 +16,19 @@ font-size:150%;
 width:25%;
 height:7%;
 background-color:#89ABD9;
-margin-top:3.5%;
-margin-left:5%;
+margin-top:1%;
+margin-right:55%;
 }
 
 .title{
 text-align:center;
 margin-top:-15%;
-margin-right:-30%;
+margin-left:30%;
 }
 
 .goods{
-height:17%;
-margin-right:2%
+height:16%;
+margin-right:2%;
 margin-left:2%;
 background-color:#FEF898;
 }
@@ -46,7 +48,7 @@ padding:1.5%;
 
 .info{
 height:15%;
-margin-right:2%
+margin-right:2%;
 margin-left:2%;
 background-color:#D5D7D6;
 }
@@ -60,4 +62,5 @@ small{
 display:inline-block;
 width:100%;
 text-align:center;
+}
 }
