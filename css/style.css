@@ -15,7 +15,6 @@ font-size:150%;
 .logo{
 width:25%;
 height:7%;
-background-color:#89ABD9;
 margin-top:3%;
 margin-right:55%;
 }
@@ -66,6 +65,7 @@ text-align:center;
 }
 
 
+
 @media screen and (min-width:480px){
 body{
 width:100%;
@@ -84,13 +84,12 @@ font-size:150%;
 }
 
 .space1{
-margin-top:10%;
+margin-top:20%;
 }
 
 .logo{
 width:25%;
 height:7%;
-background-color:#89ABD9;
 margin-top:3%;
 margin-right:55%;
 }
