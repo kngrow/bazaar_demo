@@ -6,17 +6,24 @@ line-height:1.5;
 margin:0;
 padding:0;
 background-color:#FFFAF0;
+background-image:url(haikei.png);
+background-repeat:repeat-y;
+background-size:50% auto;
 }
 
 h1{
 font-size:150%;
 }
 
+.space1{
+margin-top:15%;
+}
+
 .logo{
 width:25%;
 height:7%;
 margin-top:3%;
-margin-right:55%;
+margin-right:35%;
 }
 
 .title{
@@ -26,7 +33,7 @@ margin-left:30%;
 }
 
 .goods{
-height:16%;
+min-height:150px;
 margin-right:2%;
 margin-left:2%;
 background-color:#FEF898;
@@ -34,10 +41,11 @@ background-color:#FEF898;
 
 .category{
 float:left;
-width:48%;
-height:6.5%;
-margin-right:1%;
-margin-left:1%;
+min-height:150px;
+margin-top:1%;
+margin-right:2%;
+margin-left:2%;
+margin-bottom:1%;
 background-color:#F29BA1;
 }
 
@@ -46,7 +54,8 @@ padding:1.5%;
 }
 
 .info{
-height:15%;
+min-height:70px;
+height:30%;
 margin-right:2%;
 margin-left:2%;
 background-color:#D5D7D6;
@@ -73,6 +82,9 @@ line-height:1.5;
 margin:0;
 padding:0;
 background-color:#FFFAF0;
+background-image:url(haikei.png);
+background-repeat:repeat-y;
+background-size:50% auto;
 }
 
 h1{
@@ -91,7 +103,7 @@ margin-top:20%;
 width:25%;
 height:7%;
 margin-top:3%;
-margin-right:55%;
+margin-right:35%;
 }
 
 .title{
@@ -101,7 +113,8 @@ margin-left:30%;
 }
 
 .goods{
-height:20%;
+min-height:230px;
+height:60%;
 margin-right:2%;
 margin-left:2%;
 background-color:#FEF898;
@@ -110,9 +123,9 @@ background-color:#FEF898;
 .category{
 float:left;
 width:48%;
-height:6.5%;
-margin-right:1%;
-margin-left:1%;
+min-height:120px;
+height:30%;
+margin:1%;
 background-color:#F29BA1;
 }
 
@@ -121,7 +134,8 @@ padding:1.5%;
 }
 
 .info{
-height:15%;
+min-height:80px;
+height:30%;
 margin-right:2%;
 margin-left:2%;
 margin-top:4%;
