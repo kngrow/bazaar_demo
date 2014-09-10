@@ -29,6 +29,20 @@ margin-top:-15%;
 background-color:#FDC734;
 }
 
+.name{
+width:80%;
+min-height:150px;
+background-color:#D5FF55;
+}
+
+.gazou{
+width:30%;
+min-height:120px;
+background-color:#0013E9;
+position:relative;
+top:-60px;
+right:30%;
+}
 }
 
 @media screen and (min-width:480px){
@@ -61,4 +75,18 @@ margin-top:-20%;
 background-color:#FDC734;
 }
 
+.name{
+width:80%;
+min-height:200px;
+background-color:#D5FF55;
+}
+
+.gazou{
+width:30%;
+min-height:150px;
+background-color:#0013E9;
+position:relative;
+top:-60px;
+right:30%;
+}
 }
