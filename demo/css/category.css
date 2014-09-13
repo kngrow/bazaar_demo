@@ -35,8 +35,9 @@ margin-left:18%;
 
 
 .gazou{
-width:60%;
+width:40%;
 min-height:150px;
+margin-left:30;
 background-color:#15FF7A;
 }
 
@@ -52,8 +53,6 @@ margin-top:15%;
 color:#02940E;
 }
 }
-
-
 
 @media screen and (min-width:480px){
 body{
@@ -71,7 +70,12 @@ font-size:300%;
 
 
 h2{
-font-size:250%;
+font-size:200%;
+}
+
+h3{
+font-size:200%;
+color:#02940E;
 }
 
 .haikei{
@@ -83,15 +87,6 @@ background-color:#FEF898;
 }
 
 .space{
-margin-left:8%;
-}
-
-
-.space1{
-margin-top:20%;
-}
-
-.space2{
 padding:0.1px;
 }
 
@@ -107,12 +102,18 @@ margin-left:25%;
 }
 
 .gazou{
-width:60%;
-min-height:350px;
+width:40%;
+min-height:200px;
+top:-160px;
+right:20%;
 background-color:#15FF7A;
+position:relative;
 }
 
-.situation{
-color:#02940E;
+.a1{
+margin-left:35%;
 }
+
 }
+
+
