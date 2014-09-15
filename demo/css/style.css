@@ -117,18 +117,6 @@ background-color:#FDE734;
 font-size:150%;
 }
 
-.space1{
-margin-top:20%;
-}
-
-.space4{
-padding:0.1px;
-}
-
-.space5{
-padding:1.5%;
-}
-
 
 .logo{
 margin-top:3%;
@@ -159,6 +147,15 @@ background-color:#021F4D;
 .space{
 padding:1.5%;
 }
+
+.space1{
+margin-top:20%;
+}
+
+.space4{
+padding:0.1px;
+}
+
 
 .info{
 min-height:200px;

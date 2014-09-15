@@ -13,14 +13,28 @@ h1{
 font-size:160%;
 }
 
+h2{
+font-size:100%;
+}
+
+h3{
+font-size:100%;
+color:#02940E;
+}
+
+
 .haikei{
 background-color:#FDE734;
 }
 
 .haikei1{
 background-color:#FEF898;
+margin:5%;
 }
 
+.space{
+margin-left:5%;
+}
 
 .logo{
 margin-top:3%;
@@ -36,22 +50,17 @@ margin-left:18%;
 
 .gazou{
 width:40%;
-min-height:150px;
-margin-left:30;
+min-height:100px;
+top:-90px;
+right:20%;
 background-color:#15FF7A;
+position:relative;
 }
 
-.space{
-margin-left:5%;
+.a1{
+margin-left:40%;
 }
 
-.space1{
-margin-top:15%;
-}
-
-.situation{
-color:#02940E;
-}
 }
 
 @media screen and (min-width:480px){
@@ -84,6 +93,7 @@ background-color:#FDE734;
 
 .haikei1{
 background-color:#FEF898;
+margin:5%;
 }
 
 .space{
