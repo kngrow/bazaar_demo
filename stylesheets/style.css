@@ -1,4 +1,10 @@
 /* line 8, ../sass/style.scss */
 html, body {
+  width: 100%;
+  height: 100%;
   background-color: #7ac2e8;
+}
+/* line 13, ../sass/style.scss */
+html header, body header {
+  height: 20px;
 }

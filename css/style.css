@@ -1,0 +1,40 @@
+/* line 8, ../sass/style.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #7ac2e8;
+}
+/* line 13, ../sass/style.scss */
+html header, body header {
+  height: 80px;
+  position: relative;
+}
+@media screen and (min-width: 320px) {
+  /* line 17, ../sass/style.scss */
+  html header #title, body header #title {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* line 17, ../sass/style.scss */
+  html header #title, body header #title {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 17, ../sass/style.scss */
+  html header #title, body header #title {
+    margin-top: 180px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 17, ../sass/style.scss */
+  html header #title, body header #title {
+    margin-top: 0;
+  }
+}
+/* line 32, ../sass/style.scss */
+html .introduction, body .introduction {
+  word-wrap: nowrap;
+  padding: 20px;
+}
