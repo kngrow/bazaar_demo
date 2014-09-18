@@ -36,5 +36,9 @@ html header, body header {
 /* line 32, ../sass/style.scss */
 html .introduction, body .introduction {
   word-wrap: nowrap;
-  padding: 20px;
+  padding: 5px;
+}
+/* line 36, ../sass/style.scss */
+html .feature, body .feature {
+  padding: 5px;
 }
