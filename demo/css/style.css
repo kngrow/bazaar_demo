@@ -8,7 +8,7 @@
     visibility: hidden;
   }
 
-  /* line 12, ../../sass/style.scss */
+  /* line 11, ../../sass/style.scss */
   .clearfix {
     min-height: 1px;
   }
@@ -63,6 +63,19 @@
   /* line 61, ../../sass/style.scss */
   body article .inner {
     margin: auto;
+  }
+  /* line 69, ../../sass/style.scss */
+  body article .item .category h2 {
+    border-bottom: #bbb solid 1px;
+    color: #6099a4;
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  /* line 74, ../../sass/style.scss */
+  body article .item .category h2 .sub_title {
+    padding-left: 7px;
+    font-size: 12px;
+    color: #888;
   }
 }
 /*

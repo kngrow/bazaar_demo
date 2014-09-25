@@ -52,7 +52,7 @@ ol, ul{
 }
 
 table{
-    border-collapse: collapse; 
+    border-collapse: collapse;
     border-spacing:0;
 }
 
@@ -65,7 +65,7 @@ a:focus {
 }
 
 .clearfix:after {
-	content: "."; 
+	content: ".";
 	display: block;
 	clear: both;
 	height: 0;
@@ -88,10 +88,10 @@ a:focus {
 	clear:both;
 }
 
-.inline_block {  
-	display: inline-block;  
-	*display: inline;  
-	*zoom: 1;  
+.inline_block {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
 }
 
 /*base css*/
@@ -123,7 +123,7 @@ nav ul{
 }
 
 nav li{
-	width: 215px; 
+	width: 215px;
 	text-align: center;
 	float: left;
 	padding:

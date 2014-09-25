@@ -8,10 +8,10 @@
   height: 0;
   visibility: hidden;
 }
-
 .clearfix {
   min-height: 1px;
 }
+
 
 body{
 width:100%;
@@ -63,6 +63,24 @@ background-color: #eee;
     }
     .sentence{
     }
+
+ .item{
+    .category {
+       h2 {
+         border-bottom: #bbb solid 1px;
+         color: #6099a4;
+         font-size: 20px;
+         padding-left : 20px;
+         .sub_title {
+           padding-left: 7px;
+           font-size: 12px;
+           color: #888;
+         }
+       }
+    }
+
+}
+
 
   }
 
