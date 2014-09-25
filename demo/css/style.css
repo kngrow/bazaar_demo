@@ -19,7 +19,7 @@
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background: #eee;
+    background-color: #eee;
   }
   /* line 24, ../../sass/style.scss */
   body .container header {
@@ -35,14 +35,20 @@
   }
   /* line 33, ../../sass/style.scss */
   body .container nav ul {
-    padding: 60px 0 0 0;
     list-style: none;
+    padding: 0;
   }
   /* line 36, ../../sass/style.scss */
   body .container nav ul li {
-    width: 160px;
+    width: 120px;
     text-align: center;
     float: left;
+  }
+  /* line 40, ../../sass/style.scss */
+  body .container nav ul li a {
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    color: #6099a4;
   }
 }
 /*

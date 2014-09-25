@@ -18,7 +18,7 @@ width:100%;
 line-height:1.5;
 margin:0;
 padding:0;
-background: #eee;
+background-color: #eee;
   .container{
 
     header {
@@ -31,12 +31,17 @@ background: #eee;
         margin:  auto;
       }
       ul {
-        padding: 60px 0 0 0;
         list-style :none;
+        padding : 0;
         li {
-          width: 160px;
+          width: 120px;
           text-align: center;
           float: left;
+           a {
+             letter-spacing: 0.2em;
+             text-decoration: none;
+             color: #6099a4;
+           }
         }
       }
     }
