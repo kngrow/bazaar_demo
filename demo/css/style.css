@@ -5,9 +5,15 @@ width:100%;
 line-height:1.5;
 margin:0;
 padding:0;
-background-color:#FFFAF0;
+
+  background: #eeeeee;
 }
 
+
+
+
+
+/*
 h1{
 font-size:150%;
 }
@@ -143,4 +149,4 @@ display:inline-block;
 width:100%;
 text-align:center;
 }
-}
+}*/
