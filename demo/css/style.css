@@ -77,6 +77,10 @@
     font-size: 12px;
     color: #888;
   }
+  /* line 80, ../../sass/style.scss */
+  body article .item .category ul {
+    list-style: none;
+  }
 }
 /*
 h1{
