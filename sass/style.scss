@@ -23,12 +23,18 @@ background-color: #eee;
 
     header {
       background-color : #FFF;
+        .inner {
+           #top {
+             margin-left : -40%;
+           }
+        }
     }
 
     nav {
       background-color : #FFF;
       .inner {
         margin:  auto;
+
       }
       ul {
         list-style :none;
@@ -44,6 +50,18 @@ background-color: #eee;
            }
         }
       }
+    }
+
+  }
+
+  article {
+      clear: both;
+      padding: 50px 0 0 0;
+      background: #fff;
+    .inner {
+      margin : auto ;
+    }
+    .sentence{
     }
 
   }
