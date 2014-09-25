@@ -1,50 +1,55 @@
-@media screen and (max-width: 480px) {
-  /* line 4, ../../sass/style.scss */
-  .clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    height: 0;
-    visibility: hidden;
-  }
+@media screen and (max-width:480px){
 
-  /* line 12, ../../sass/style.scss */
-  .clearfix {
-    min-height: 1px;
-  }
 
-  /* line 16, ../../sass/style.scss */
-  body {
-    width: 100%;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    background: #eee;
-  }
-  /* line 24, ../../sass/style.scss */
-  body .container header {
-    background-color: #FFF;
-  }
-  /* line 28, ../../sass/style.scss */
-  body .container nav {
-    background-color: #FFF;
-  }
-  /* line 30, ../../sass/style.scss */
-  body .container nav .inner {
-    margin: auto;
-  }
-  /* line 33, ../../sass/style.scss */
-  body .container nav ul {
-    padding: 60px 0 0 0;
-    list-style: none;
-  }
-  /* line 36, ../../sass/style.scss */
-  body .container nav ul li {
-    width: 160px;
-    text-align: center;
-    float: left;
-  }
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
 }
+
+.clearfix {
+  min-height: 1px;
+}
+
+body{
+width:100%;
+line-height:1.5;
+margin:0;
+padding:0;
+background: #eee;
+  .container{
+
+    header {
+      background-color : #FFF;
+    }
+
+    nav {
+      background-color : #FFF;
+      .inner {
+        margin:  auto;
+      }
+      ul {
+        padding: 60px 0 0 0;
+        list-style :none;
+        li {
+          width: 160px;
+          text-align: center;
+          float: left;
+        }
+      }
+    }
+
+  }
+
+
+}
+}
+
+
+
+
 /*
 h1{
 font-size:150%;
