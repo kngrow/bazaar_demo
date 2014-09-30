@@ -76,6 +76,9 @@ background-color: #eee;
            font-size: 12px;
            color: #888;
          }
+         &:last-child{
+           font-size : 100%;
+         }
        }
        ul {
          list-style : none;
