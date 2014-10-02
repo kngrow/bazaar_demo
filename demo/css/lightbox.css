@@ -103,7 +103,7 @@ body:after {
 .lb-prev, .lb-next {
   height: 100%;
   cursor: pointer;
-  display: block;
+  display: none !important;
 }
 
 .lb-nav a.lb-prev {
@@ -117,6 +117,7 @@ body:after {
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s;
+  display: none !important;
 }
 
 .lb-nav a.lb-prev:hover {
@@ -180,7 +181,7 @@ body:after {
 }
 
 .lb-data .lb-number {
-  display: block;
+  display: none !important;
   clear: left;
   padding-bottom: 1em;
   font-size: 12px;
