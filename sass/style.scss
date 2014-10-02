@@ -52,7 +52,7 @@ background-color: #eee;
       }
     }
 
-  }
+
 
   article {
       clear: both;
@@ -60,7 +60,7 @@ background-color: #eee;
       background: #fff;
     .inner {
       margin : auto ;
-    }
+
     .sentence{
     }
 
@@ -91,10 +91,19 @@ background-color: #eee;
 
 }
 
+.back {
+    position:fixed;
+    right : 30px;
+    bottom:130px;
+}
+
+
+
 
   }
+}
 
-
+}
 }
 }
 
