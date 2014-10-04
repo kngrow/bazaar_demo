@@ -7,24 +7,8 @@
 <link rel="stylesheet" type="text/css" href="css/lightbox.css">
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/lightbox.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script>
-/*▼light boxで商品説明を出す*/
-$(function(){
-	$(".item a").each(function() {
-		//aタグ内にimgタグがあるか？
-		if( $(this).find('img')) {
-			$(this).attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
-		}
-		
-		$(this).on("click",function(){
-			var items = $(this).find(".items").html();
-			$(".detail_text").html(items);
-		});
-	});
-	
-	$(".lb-data").css({"display":"none !important"});
-	$(".lb-number").css({"display":"none !important"});
-});
 </script>
 </head>
 
@@ -49,17 +33,28 @@ $(function(){
 	<div class="inner">
     	<section class="slider">
         	<ul>
-            	<li><img src="images/bazar_slider.jpg" alt="pickup" class="picup"></li>
+            	<li><img src="images/a.jpg" alt="pickup" class="picup"></li>
+                <li><img src="images/b.jpg" alt="pickup" class="picup"></li>
+                <li><img src="images/c.jpg" alt="pickup" class="picup"></li>
+                <li><img src="images/d.jpg" alt="pickup" class="picup"></li>
             </ul>
             <div class="sentence">
                 <h3>フリーマーケットめたたぐ市とは・・・</h3>
                 <p>11月祭でフリーマーケットを開催します。<br />中古品で買うより安いゲーム、マンガ、フィギュアはもちろん、<br />生活必需品や手に入りづらいレアな掘り出し物、珍品等盛りだくさん！<br />是非ともめたたぐフリーマーケットにご来店ください!!<br />また商品についてはHPで詳しく掲載しているので<br />事前に観て検討していただく事も可能となっております。<br />是非ご利用ください。</p>
         	</div><!--/.sentence-->
         </section><!--/.slider-->
+        
+        <!--▼スクリーンサイズのwidthが830p以下になったとき用-->
+        <div class="sentence_2">
+                <h3>フリーマーケットめたたぐ市とは・・・</h3>
+                <p>11月祭でフリーマーケットを開催します。<br />中古品で買うより安いゲーム、マンガ、フィギュアはもちろん、<br />生活必需品や手に入りづらいレアな掘り出し物、珍品等盛りだくさん！<br />是非ともめたたぐフリーマーケットにご来店ください!!<br />また商品についてはHPで詳しく掲載しているので<br />事前に観て検討していただく事も可能となっております。<br />是非ご利用ください。</p>
+        	</div><!--/.sentence-->
+        <!--▲スクリーンサイズのwidthが830p以下になったとき用-->
+        
         <section class="item">
         	<div class="category clearfix">
                 <h2>AUDIO<span class="sub_title">音楽機器</span></h2>
-                <ul class="clearfix">
+                <ul>
                     <li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -105,8 +100,8 @@ $(function(){
                     <li><a href="#"><img src="images/bazar_image.png" alt="demo"></a></li>
                 </ul>
             </div><!--/.category-->
+            <a href=""><img src="images/bazar_go_top.png" alt="back top" class="back"></a>
         </section><!--/.item-->
-        <a href="#top"><img src="images/bazar_go_top.png" alt="back top" class="back"></a>
     </div><!--/.inner-->
 </article>
 <footer>
