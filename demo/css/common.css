@@ -52,7 +52,7 @@ ol, ul{
 }
 
 table{
-    border-collapse: collapse; 
+    border-collapse: collapse;
     border-spacing:0;
 }
 
@@ -65,7 +65,7 @@ a:focus {
 }
 
 .clearfix:after {
-	content: "."; 
+	content: ".";
 	display: block;
 	clear: both;
 	height: 0;
@@ -88,10 +88,10 @@ a:focus {
 	clear:both;
 }
 
-.inline_block {  
-	display: inline-block;  
-	*display: inline;  
-	*zoom: 1;  
+.inline_block {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
 }
 
 /*base css*/
@@ -123,7 +123,8 @@ nav ul{
 nav li{
 	max-width: 215px;
 	width: 100%;
-	height: auto; 
+	height: auto;
+
 	text-align: center;
 	float: left;
 	padding:
@@ -259,39 +260,39 @@ img.picup{
 #top img{
 	width: 100%;
 	height: auto;
-}	
+}
 
 @media screen and (max-width: 960px) {
-	
+
 	nav{
 		max-width: 700px;
 	}
-	
+
 	nav ul li{
 		width: 150px;
 	}
-	
+
 	article .item .category li:nth-child(n+4){
 		display: none;
 	}
-	
+
 	article .item{
 		max-width: 700px;
 		margin: 70px auto 0 auto;
 	}
-	
+
 	article .slider{
 		max-width: 700px;
-		
+
 		margin: 0 auto;
 	}
-	
+
 	article .sentence{
 		position: absolute;
 		top: 210px;
 		left: 10px;
 	}
-	
+
 	article .sentence h3{
 		font-size: 14px;
 	}
@@ -299,51 +300,51 @@ img.picup{
 	article .sentence p{
 		font-size: 8px;
 	}
-	
+
 }
 
 @media screen and (max-width: 830px) {
-	
+
 	nav{
 		max-width: 550px;
 	}
-	
+
 	nav ul li{
 		width: 200px;
 		margin: 10px 0 0 0;
 	}
-	
+
 	article{
 		padding: 30px 0 0 0;
 	}
-	
+
 	article .item .category li:nth-child(n+3){
 		display: none;
 	}
-	
+
 	article .item{
 		max-width: 450px;
 		margin: 20px auto 0 auto;
 	}
-	
+
 	article .item ul{
 		max-width:450px;
 		margin: 0 auto;
 	}
-	
+
 	article .slider{
 		max-width: 450px;
 		height: 242px;
 		margin: 0 auto;
 		overflow: hidden;
 	}
-	
+
 	article .sentence{
 		display: none;
 		height: 0;
 		visibility: hidden;
 	}
-	
+
 	article .sentence_2{
 		max-width: 450px;
 		display: block;
@@ -354,7 +355,7 @@ img.picup{
 		padding: 0;
 		margin: 20px auto 0 auto;
 	}
-	
+
 	article .sentence_2 h3{
 		font-size: 14px;
 		color: #666;
@@ -364,7 +365,7 @@ img.picup{
 		font-size: 8px;
 		color: #888;
 	}
-	
+
 	img.picup{
 		max-width: 450px;
 		height: auto;
@@ -372,35 +373,35 @@ img.picup{
 }
 
 @media screen and (max-width: 605px) {
-	
+
 	nav{
 		max-width: 250px;
 	}
-	
+
 	nav ul li{
 		width: 100%;
 		margin: 10px 0 0 0;
 		text-align: left;
 	}
-	
+
 	article .slider{
 		max-width: 250px;
 		height: auto;
 	}
-	
+
 	article .item .category li:nth-child(n+2){
 		display: none;
 	}
-	
+
 	article .sentence_2{
 		width: 255px;
 	}
-	
+
 	article .item{
 		max-width: 250px;
 		margin: 20px auto 0 auto;
 	}
-	
+
 	article .item ul{
 		max-width: 200px;
 		margin: 0 auto;
