@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/style.css" />
 <script src="js/underscore.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/backbone.js"></script>
 <script type="text/javascript" src="js/lightbox.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 </head>
@@ -178,7 +179,7 @@
         	</div><!--/.category-->
             <div class="category clearfix">
                 <h2>ACCESSORIES<span>/</span>GOODS<span class="sub_title">アクセサリー・雑貨</span></h2>
-                <ul class="clearfix">
+                <ul class="clearfix" id="item">
                 	<li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -212,6 +213,7 @@
                             <span class="items">
                             	<h3>商品名</h3>
                                 <P>説明文が入ります説明文が入ります説明文が入ります説明文が入ります</P>
+                                <P>説明文が入りasdasdadsます説明文が入ります説明文が入ります説明文が入ります</P>
                             </span>
                         </a>
                     </li>
@@ -228,4 +230,16 @@
 </footer>
 </div><!--/.container-->
 </body>
+
+<script type="text/template" id="item_temp">
+     <li>
+       <a href="../../regi/img/item/item_photo/<%- photodir %>/<%- photo %>" >
+           <img src="../../regi/img/item/item_photo/<%- photodir %>/<%- photo %>" alt="AUDIO_1" class="img">
+             <span class="items">
+               <h3><%- name %></h3>
+                 <P><%- detail %></P>
+             </span>
+         </a>
+     </li>
+</script>
 </html>
