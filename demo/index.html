@@ -56,7 +56,7 @@
         <section class="item">
         	<div class="category clearfix">
                 <h2>AUDIO<span class="sub_title">音楽機器</span></h2>
-                <ul>
+                <ul class="clearfix" id="audio">
                     <li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -95,9 +95,9 @@
                     </li>
                 </ul>
         	</div><!--/.category-->
-            <div class="category clearfix">
+            <div class="category clearfix" >
                 <h2>GAME<span>/</span>HOBBY<span class="sub_title">ゲーム・おもちゃ</span></h2>
-                <ul>
+                <ul id="game">
                 	<li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -138,7 +138,7 @@
         	</div><!--/.category-->
             <div class="category clearfix">
                 <h2>DAILY<span class="sub_title">日用品</span></h2>
-                <ul class="clearfix">
+                <ul class="clearfix" id="daily">
                 	<li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -179,7 +179,7 @@
         	</div><!--/.category-->
             <div class="category clearfix">
                 <h2>ACCESSORIES<span>/</span>GOODS<span class="sub_title">アクセサリー・雑貨</span></h2>
-                <ul class="clearfix" id="item">
+                <ul class="clearfix" id="accessories">
                 	<li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -233,8 +233,8 @@
 
 <script type="text/template" id="item_temp">
      <li>
-       <a href="../../regi/img/item/item_photo/<%- photodir %>/<%- photo %>" >
-           <img src="../../regi/img/item/item_photo/<%- photodir %>/<%- photo %>" alt="AUDIO_1" class="img">
+       <a href="../reji/img/item/item_photo/<%- photodir %>/<%- photo %>"  data-lightbox="image-1" data-title="<%- name %>">
+           <img src="../reji/img/item/item_photo/<%- photodir %>/<%- photo %>" alt="AUDIO_1" class="img">
              <span class="items">
                <h3><%- name %></h3>
                  <P><%- detail %></P>
