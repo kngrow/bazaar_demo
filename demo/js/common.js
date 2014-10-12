@@ -84,17 +84,18 @@ $(function(){
 
 
 							//全部の商品のデータ
+							for(var i = 0 ; i < data.length ; i++){
 							var allitem = new all({
-								id : data[0].Item.id, //商品id
-								name : data[0].Item.item_name, //商品の名前
-								price : data[0].Item.item_price, //値段
-								detail : data[0].Item.item_detail , //説明
-								photo : data[0].Item.item_photo , //写真の名前
-								photodir : data[0].Item.item_photo_dir ,		//写真の場所
+								id : data[i].Item.id, //商品id
+								name : data[i].Item.item_name, //商品の名前
+								price : data[i].Item.item_price, //値段
+								detail : data[i].Item.item_detail , //説明
+								photo : data[i].Item.item_photo , //写真の名前
+								photodir : data[i].Item.item_photo_dir ,		//写真の場所
 								// /regi/img/item/item_photo/'item_photo_dir'/'item_photo でとれるはず
-								 stock :data[0].Item.item_stock //個数
+								 stock :data[i].Item.item_stock //個数
 							});
-							console.log( allitem.toJSON() );
+							// console.log( allitem.toJSON() );
 
 
 							//view
@@ -112,6 +113,7 @@ $(function(){
 
 								console.log(topvw.render().el );
 								$("#item").append(topvw.render().el);
+							}
 						});
 });
 
