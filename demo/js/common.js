@@ -66,11 +66,18 @@ $(function(){
 							//Router
 							var Router = Backbone.Router.extend({
 								routes : {
+											'' : 'home',
 											'ro_audio' : 'ro_audio',
 											'ro_game' : 'ro_game',
 											'ro_dialy' : 'ro_dialy',
 											'ro_acc' : 'ro_acc'
 								},
+								home : function(){
+									$("#audio").parent().show();
+									$("#daily").parent().show();
+									$("#game").parent().show();
+									$("#accessories").parent().show();
+								}
 								ro_audio : function(){
 									console.log("audio");
 									$("#audio").parent().show();
@@ -128,16 +135,19 @@ $(function(){
 
 /*▼画面上部に戻るボタンのアニメーション*/
 $(function(){
-	$(".item .back").click(function(){
+	$(".item .back").on("touchend click",function(){
 		$("html body").animate({scrollTop:0},'slow');
 		return false;
-	})
+	});
+
+
 });
+
 
 /*▼スライドショー*/
 
 $(function(){
-	$(".slider li").css({left:960})
+	$(".slider li").css({left:960});
 
 	fadein();
 });
@@ -158,7 +168,7 @@ function fadein(){
 			}
 
 		}
-	)
+	);
 }
 
 /*▼フェードアウトの設定*/
@@ -180,5 +190,5 @@ function fadeout(){
 				fadein();
 			}
 		}
-	)
+	);
 }
