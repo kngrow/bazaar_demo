@@ -28,6 +28,7 @@ $(function(){
 							});
 							// console.log( allitem.toJSON() );
 							//view
+
 							var topitemsView = Backbone.View.extend({
 								tagName : 'li',
 								template : _.template ($("#item_temp").html() ),
@@ -148,7 +149,6 @@ $(function(){
 
 $(function(){
 	$(".slider li").css({left:960});
-
 	fadein();
 });
 
