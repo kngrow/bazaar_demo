@@ -29,6 +29,7 @@ $(function(){
 							// console.log( allitem.toJSON() );
 							//view
 							var topitemsView = Backbone.View.extend({
+								tagName : 'li',
 								template : _.template ($("#item_temp").html() ),
 								// events : {
 								// 	'click .items' : ''
@@ -50,7 +51,7 @@ $(function(){
 						// 			$("#game").append(topvw.render().el);
 						// 			break;
 						// 			case 3 :
-						// 				$("#dialy").append(topvw.render	.el);
+						// 				$("#daily").append(topvw.render	.el);
 						// 				break;
 						// 				case 4 :
 						// 		$("#accessories").append(topvw.render().el);
@@ -72,12 +73,30 @@ $(function(){
 								},
 								ro_audio : function(){
 									console.log("audio");
+									$("#audio").parent().show();
+									$("#daily").parent().hide();
+									$("#game").parent().hide();
+									$("#accessories").parent().hide();
 								},
 								ro_game : function(){
 									console.log("g");
+									$("#game").parent().show();
+									$("#daily").parent().hide();
+									$("#audio").parent().hide();
+									$("#accessories").parent().hide();
 								},
 								ro_dialy : function(){
 									console.log("d");
+									$("#daily").parent().show();
+									$("#audio").parent().hide();
+									$("#game").parent().hide();
+									$("#accessories").parent().hide();
+								},
+								ro_acc : function(){
+									$("#accessories").parent().show();
+									$("#daily").parent().hide();
+									$("#game").parent().hide();
+									$("#audio").parent().hide();
 								}
 							});
 
