@@ -56,7 +56,6 @@ $(function(){
 						// 		$("#accessories").append(topvw.render().el);
 						// 		break;
 						// }
-								var topvw  = new  topitemsView({ model : allitem});
 
 								console.log(topvw.render().el );
 								$("#accessories").append(topvw.render().el);
@@ -64,17 +63,26 @@ $(function(){
 
 
 							//Router
-							var router = Backbone.Router.extend({
+							var Router = Backbone.Router.extend({
 								routes : {
-											"" : "home",
-											"audio" : "ro_audio",
-											"game" : "ro_game",
-											"dialy" : "ro_dialy",
-											"acc" : "ro_acc"
+											'ro_audio' : 'ro_audio',
+											'ro_game' : 'ro_game',
+											'ro_dialy' : 'ro_dialy',
+											'ro_acc' : 'ro_acc'
+								},
+								ro_audio : function(){
+									console.log("audio");
+								},
+								ro_game : function(){
+									console.log("g");
+								},
+								ro_dialy : function(){
+									console.log("d");
 								}
 							});
 
-
+							var router = new Router();
+							Backbone.history.start();
 						});
 });
 
