@@ -39,14 +39,25 @@ $(function(){
 									var top_temp = this.template( this.model.toJSON() );
 									this.$el.html (top_temp);
 									return this ;
-								} ,
-								lightbox : function(){
-									var items = $(this).find(".items").html();
-									$(".detail_text").html(items);
 								}
 							});
 
+								var topvw  = new  topitemsView({ model : allitem});
 
+						// switch(data[i].Category.category_name){
+						// 		case 1 :
+						// 			$("#audio").append(topvw.render().el);
+						// 			break;
+						// 	  case 2 :
+						// 			$("#game").append(topvw.render().el);
+						// 			break;
+						// 			case 3 :
+						// 				$("#dialy").append(topvw.render	.el);
+						// 				break;
+						// 				case 4 :
+						// 		$("#accessories").append(topvw.render().el);
+						// 		break;
+						// }
 								var topvw  = new  topitemsView({ model : allitem});
 
 								console.log(topvw.render().el );
@@ -56,34 +67,25 @@ $(function(){
 });
 
 
-$(function(){
 
-
-
-
-	$(document).on('click touchend','' ,function(){
-		console.log("aaa");
-
-	});
-
-	// $(".item li a").each(function() {
-		//aタグ内にimgタグがあるか？
-	// 	if( $(this).find('img')) {
-	// 		$(this).attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
-	// 	}
-	//
-	// 	$(this).on("touchend click",function(){
-	// 		var items = $(this).find(".items").html();
-	// 		$(".detail_text").html(items);
-	// 	});
-	// });
-	$(document).on("click touhend" , ".items" , function(){
-		// var items =
-	});
-
-	// $(".lb-data").css({"display":"none !important"});
-	// $(".lb-number").css({"display":"none !important"});
-});
+// $(function(){
+//
+//
+// 	//  $(".item li a").each(function() {
+// 		//aタグ内にimgタグがあるか？
+// 		// if( $(this).find('img')) {
+// 		// 	$(this).attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
+// 		// }
+// 		//
+// 		// $(this).on("click",function(){
+// 		// 	var items = $(this).find(".items").html();
+// 		// 	$(".detail_text").html(items);
+// 		// });
+// 	// });
+// 	//
+// 	// $(".lb-data").css({"display":"none !important"});
+// 	// $(".lb-number").css({"display":"none !important"});
+// });
 
 /*▼画面上部に戻るボタンのアニメーション*/
 $(function(){
@@ -141,44 +143,3 @@ function fadeout(){
 		}
 	)
 }
-
-
-
-
-
-
-			//
-			// var task = Backbone.Model.extend({
-			// 	defaults: {
-			// 		 title : 'dont it... ',
-			// 		completed : true
-			// 	},
-			// 		toggle: function(){
-			// 				this.set('title', "toggled");
-			// 	}
-			// });
-			//
-			// var task1 =  new task();
-
-
-
-		//view
-//
-// 		var  topitemsView = Backbone.View.extend({
-// 			id : "li-id",
-// 			template : _.template( $("#item_temp").html() ),
-//
-// 			render : function(){
-// 				var temp = this.template( this.model.toJSON() );
-// 				this.$el.html( temp );
-// 				return this;
-// 			}
-//
-// 		});
-//
-// var View1 = new topitemsView({model : task1});
-//
-// console.log(View1.render().el);
-//
-// $("#item").append(item.render().el);
-// });
