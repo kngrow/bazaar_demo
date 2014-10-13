@@ -78,7 +78,7 @@ $(function(){
 									$("#daily").parent().show();
 									$("#game").parent().show();
 									$("#accessories").parent().show();
-								}
+								},
 								ro_audio : function(){
 									console.log("audio");
 									$("#audio").parent().show();
