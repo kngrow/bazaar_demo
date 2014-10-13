@@ -7,7 +7,9 @@
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/lightbox.css">
 <link rel="stylesheet" href="css/style.css" />
+<script src="js/underscore.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/backbone.js"></script>
 <script type="text/javascript" src="js/lightbox.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 </head>
@@ -54,7 +56,7 @@
         <section class="item">
         	<div class="category clearfix">
                 <h2>AUDIO<span class="sub_title">音楽機器</span></h2>
-                <ul>
+                <ul class="clearfix" id="audio">
                     <li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -93,9 +95,9 @@
                     </li>
                 </ul>
         	</div><!--/.category-->
-            <div class="category clearfix">
+            <div class="category clearfix" >
                 <h2>GAME<span>/</span>HOBBY<span class="sub_title">ゲーム・おもちゃ</span></h2>
-                <ul>
+                <ul id="game">
                 	<li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -136,7 +138,7 @@
         	</div><!--/.category-->
             <div class="category clearfix">
                 <h2>DAILY<span class="sub_title">日用品</span></h2>
-                <ul class="clearfix">
+                <ul class="clearfix" id="daily">
                 	<li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -177,7 +179,7 @@
         	</div><!--/.category-->
             <div class="category clearfix">
                 <h2>ACCESSORIES<span>/</span>GOODS<span class="sub_title">アクセサリー・雑貨</span></h2>
-                <ul class="clearfix">
+                <ul class="clearfix" id="accessories">
                 	<li>
                     	<a href="img/10708031_466579656816966_2014337199_n.jpg" >
                         	<img src="img/10708031_466579656816966_2014337199_n.jpg" alt="AUDIO_1" class="img">
@@ -211,6 +213,7 @@
                             <span class="items">
                             	<h3>商品名</h3>
                                 <P>説明文が入ります説明文が入ります説明文が入ります説明文が入ります</P>
+                                <P>説明文が入りasdasdadsます説明文が入ります説明文が入ります説明文が入ります</P>
                             </span>
                         </a>
                     </li>
@@ -227,4 +230,17 @@
 </footer>
 </div><!--/.container-->
 </body>
+
+<script type="text/template" id="item_temp">
+     <li>
+
+       <a href="../reji/img/item/item_photo/<%- photodir %>/normal_<%- photo %>"  data-lightbox="image-1" data-title="&lt;h3&gt; <%- name %> &lt;/h3&gt; &lt;p&gt; <%- detail %> &lt;/p&gt; &lt;p&gt;値段： <%- price  %>　　個数： <%- stock  %> &lt;/p&gt;">
+           <img src="../reji/img/item/item_photo/<%- photodir %>/thumb150_<%- photo %>" alt="写真" class="img">
+             <span class="items">
+               <h3><%- name %></h3>
+                 <P><%- detail %></P>
+             </span>
+         </a>
+     </li>
+</script>
 </html>
