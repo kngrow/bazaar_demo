@@ -27,8 +27,6 @@ $(function(){
 								category : data[i].Category.category_name //カテゴリの名前
 							});
 							// console.log( allitem.toJSON() );
-
-
 							//view
 							var topitemsView = Backbone.View.extend({
 								template : _.template ($("#item_temp").html() ),
@@ -63,6 +61,20 @@ $(function(){
 								console.log(topvw.render().el );
 								$("#accessories").append(topvw.render().el);
 							}
+
+
+							//Router
+							var router = Backbone.Router.extend({
+								routes : {
+											"" : "home",
+											"audio" : "ro_audio",
+											"game" : "ro_game",
+											"dialy" : "ro_dialy",
+											"acc" : "ro_acc"
+								}
+							});
+
+
 						});
 });
 
