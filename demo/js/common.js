@@ -1,17 +1,9 @@
-/*▼light boxで商品説明を出す*/
-
-
 $(function(){
 			//model
-
 			$.get('/reji/items/metaread')
 						.done(function(data){
 							debugger;
-
-						 	var all = Backbone.Model.extend({
-
-							});
-
+						 	var all = Backbone.Model.extend({});
 
 							//全部の商品のデータ
 							for(var i = 0 ; i < data.length ; i++){
@@ -22,19 +14,14 @@ $(function(){
 								detail : data[i].Item.item_detail , //説明
 								photo : data[i].Item.item_photo , //写真の名前
 								photodir : data[i].Item.item_photo_dir ,		//写真の場所
-								// /regi/img/item/item_photo/'item_photo_dir'/'item_photo でとれるはず
-								 stock :data[i].Item.item_stock , //個数
+								stock :data[i].Item.item_stock , //個数
 								category : data[i].Category.category_name //カテゴリの名前
 							});
-							// console.log( allitem.toJSON() );
-							//view
 
+							//view
 							var topitemsView = Backbone.View.extend({
 								tagName : 'li',
 								template : _.template ($("#item_temp").html() ),
-								// events : {
-								// 	'click .items' : ''
-								// },
 								render : function(){
 									var top_temp = this.template( this.model.toJSON() );
 									this.$el.html (top_temp);
@@ -61,8 +48,8 @@ $(function(){
 
 								console.log(topvw.render().el );
 								$("#accessories").append(topvw.render().el);
-							}
 
+							}
 
 							//Router
 							var Router = Backbone.Router.extend({
@@ -112,27 +99,6 @@ $(function(){
 							Backbone.history.start();
 						});
 });
-
-
-
-// $(function(){
-//
-//
-// 	//  $(".item li a").each(function() {
-// 		//aタグ内にimgタグがあるか？
-// 		// if( $(this).find('img')) {
-// 		// 	$(this).attr( "data-lightbox", "image-1" ); // 画像リンクの場合だけ属性を追加する
-// 		// }
-// 		//
-// 		// $(this).on("click",function(){
-// 		// 	var items = $(this).find(".items").html();
-// 		// 	$(".detail_text").html(items);
-// 		// });
-// 	// });
-// 	//
-// 	// $(".lb-data").css({"display":"none !important"});
-// 	// $(".lb-number").css({"display":"none !important"});
-// });
 
 /*▼画面上部に戻るボタンのアニメーション*/
 $(function(){
