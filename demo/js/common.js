@@ -1,4 +1,4 @@
-$(function(){
+
 			//model
 			$.get('./hogehoge.json')
 						.done(function(data){
@@ -128,7 +128,7 @@ $(function(){
 							var router = new Router();
 							Backbone.history.start();
 						});
-});
+
 
 /*▼画面上部に戻るボタンのアニメーション*/
 $(function(){
@@ -153,7 +153,7 @@ var n = 0;
 
 /*▼フェードインの設定*/
 function fadein(){
-	$(".slider li").eq(n).animate({
+	$(".slider ul li").eq(n).animate({
 		left:0},
 		{
 			duration:1000,
