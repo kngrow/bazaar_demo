@@ -55,9 +55,10 @@ $(function(){
 
                             var topSliderView = Backbone.View.extend({
                                 template : _.template($("#slide_temp").html()),
-                                render: function(){
-                                    var temp = this.template({ items : this.set(this.model.toJSON())});
-                                    return $(this.$el.html (temp)).contents("ul") ;
+                                render : function(){
+                                    var it = this.set(this.model.toJSON());
+                                    var temp = this.template({ output : it});
+                                    return temp;
                                 },
                                 set : function(array){
                                     var ret =[];
@@ -77,7 +78,7 @@ $(function(){
                             });
                             var topsv  = new topSliderView({ model : items});
                             var template = topsv.render();
-                            $($("section.slider").children("ul")[0]).append(template);
+                            $($("section.slider").children("ul")).prepend(template);
 
 
                     //Router
