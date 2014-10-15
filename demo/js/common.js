@@ -66,6 +66,7 @@ $(function(){
 									$("#daily").parent().show();
 									$("#game").parent().show();
 									$("#accessories").parent().show();
+
 								},
 								ro_audio : function(){
 									console.log("audio");
@@ -140,7 +141,7 @@ function fadein(){
 
 /*▼フェードアウトの設定*/
 function fadeout(){
-	$(".slider ul li").eq(n).animate({
+	$(".slider li").eq(n).animate({
 		left:-960},
 		{
 			duration:1000,
