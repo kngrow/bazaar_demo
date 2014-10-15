@@ -1,6 +1,6 @@
 $(function(){
 			//model
-			$.get('/reji/items/metaread')
+			$.get('./hogehoge.json')
 						.done(function(data){
 							debugger;
 						 	var all = Backbone.Model.extend({});
@@ -29,7 +29,9 @@ $(function(){
 								}
 							});
 
-								var topvw  = new  topitemsView({ model : allitem});
+
+
+							var topvw  = new  topitemsView({ model : allitem});
 
 						// switch(data[i].Category.category_name){
 						// 		case 1 :
@@ -51,7 +53,34 @@ $(function(){
 
 							}
 
-							//Router
+                            var topSliderView = Backbone.View.extend({
+                                template : _.template($("#slide_temp").html()),
+                                render: function(){
+                                    var temp = this.template({ items : this.set(this.model.toJSON())});
+                                    return $(this.$el.html (temp)).contents("ul") ;
+                                },
+                                set : function(array){
+                                    var ret =[];
+
+                                    _.each(array.item,function(value,key){
+                                        if(value.Item.item_leader){
+                                            ret[ret.length] = value.Item;
+                                        }
+                                    });
+
+                                    return ret;
+                                }
+                            });
+                            var Item = Backbone.Model.extend({});
+                            var items = new Item({
+                                item : data
+                            });
+                            var topsv  = new topSliderView({ model : items});
+                            var template = topsv.render();
+                            $($("section.slider").children("ul")[0]).append(template);
+
+
+                    //Router
 							var Router = Backbone.Router.extend({
 								routes : {
 											'' : 'home',
