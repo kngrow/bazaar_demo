@@ -10,8 +10,8 @@
 <script src="js/underscore.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/backbone.js"></script>
-<script type="text/javascript" src="js/lightbox.min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+
+
 </head>
 
 <body>
@@ -34,19 +34,22 @@
 <article>
 	<div class="inner">
     	<section class="slider">
-        	<ul>
-            	<li><img src="images/a.jpg" alt="pickup" class="picup"></li>
-                <li><img src="images/b.jpg" alt="pickup" class="picup"></li>
-                <li><img src="images/c.jpg" alt="pickup" class="picup"></li>
-                <li><img src="images/d.jpg" alt="pickup" class="picup"></li>
+            <ul>
 
-        	<ul id="slide">
+                <!--<li><img src="images/a.jpg" alt="pickup" class="picup"></li>-->
+                <!--<li><img src="images/b.jpg" alt="pickup" class="picup"></li>-->
+                <!--<li><img src="images/c.jpg" alt="pickup" class="picup"></li>-->
+                <!--<li><img src="images/d.jpg" alt="pickup" class="picup"></li>-->
 
+                <ul id="slide">
+
+                </ul>
             </ul>
-            <div class="sentence">
-                <h3>フリーマーケットめたたぐ市とは・・・</h3>
-                <p>11月祭でフリーマーケットを開催します。<br />中古品で買うより安いゲーム、マンガ、フィギュアはもちろん、<br />生活必需品や手に入りづらいレアな掘り出し物、珍品等盛りだくさん！<br />是非ともめたたぐフリーマーケットにご来店ください!!<br />また商品についてはHPで詳しく掲載しているので<br />事前に観て検討していただく事も可能となっております。<br />是非ご利用ください。</p>
-        	</div><!--/.sentence-->
+                <div class="sentence">
+                    <h3>フリーマーケットめたたぐ市とは・・・</h3>
+                    <p>11月祭でフリーマーケットを開催します。<br />中古品で買うより安いゲーム、マンガ、フィギュアはもちろん、<br />生活必需品や手に入りづらいレアな掘り出し物、珍品等盛りだくさん！<br />是非ともめたたぐフリーマーケットにご来店ください!!<br />また商品についてはHPで詳しく掲載しているので<br />事前に観て検討していただく事も可能となっております。<br />是非ご利用ください。</p>
+                </div><!--/.sentence-->
+
         </section><!--/.slider-->
 
         <!--▼スクリーンサイズのwidthが830p以下になったとき用-->
@@ -243,5 +246,16 @@
              </span>
          </a>
 </script>
+
+<script type="text/template" id="slide_temp">
+
+            <% debugger; %>
+            <% for(var i = 0; i < output.length;i++){ %>
+            <li><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup"></li>
+            <% } %>
+
+</script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/lightbox.min.js"></script>
 
 </html>
