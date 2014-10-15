@@ -1,6 +1,6 @@
 $(function(){
 			//model
-			$.get('/reji/items/metaread')
+			$.get('hogehoge.json')
 						.done(function(data){
 							debugger;
 						 	var all = Backbone.Model.extend({});
@@ -15,7 +15,7 @@ $(function(){
 								photo : data[i].Item.item_photo , //写真の名前
 								photodir : data[i].Item.item_photo_dir ,		//写真の場所
 								stock :data[i].Item.item_stock , //個数
-								category : data[i].Category.category_name //カテゴリの名前
+								category : data[i].Category.category_id //カテゴリの名前
 							});
 
 							//view
@@ -31,23 +31,23 @@ $(function(){
 
 								var topvw  = new  topitemsView({ model : allitem});
 
-						// switch(data[i].Category.category_name){
-						// 		case 1 :
-						// 			$("#audio").append(topvw.render().el);
-						// 			break;
-						// 	  case 2 :
-						// 			$("#game").append(topvw.render().el);
-						// 			break;
-						// 			case 3 :
-						// 				$("#daily").append(topvw.render	.el);
-						// 				break;
-						// 				case 4 :
-						// 		$("#accessories").append(topvw.render().el);
-						// 		break;
-						// }
+						switch(data[i].Category.category_name){
+								case 1 :
+									$("#audio").append(topvw.render().el);
+									break;
+							  case 2 :
+									$("#game").append(topvw.render().el);
+									break;
+									case 3 :
+										$("#daily").append(topvw.render	.el);
+										break;
+										case 4 :
+								$("#accessories").append(topvw.render().el);
+								break;
+						}
 
 								console.log(topvw.render().el );
-								$("#accessories").append(topvw.render().el);
+								// $("#accessories").append(topvw.render().el);
 
 							}
 
