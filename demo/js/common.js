@@ -15,7 +15,8 @@ $(function(){
 								photo : data[i].Item.item_photo , //写真の名前
 								photodir : data[i].Item.item_photo_dir ,		//写真の場所
 								stock :data[i].Item.item_stock , //個数
-								category : data[i].Category.category_id //カテゴリの名前
+								category : data[i].Category.category_name, //カテゴリの名前
+								c_id : data[i].Category.id // カテゴリのid
 							});
 
 							//view
@@ -31,7 +32,7 @@ $(function(){
 
 								var topvw  = new  topitemsView({ model : allitem});
 
-						switch(data[i].Category.category_name){
+						switch(data[i].Category.id){
 								case 1 :
 									$("#audio").append(topvw.render().el);
 									break;
@@ -46,7 +47,7 @@ $(function(){
 								break;
 						}
 
-								console.log(topvw.render().el );
+								// console.log(topvw.render().el );
 								// $("#accessories").append(topvw.render().el);
 
 							}
