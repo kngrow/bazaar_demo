@@ -91,7 +91,16 @@
   body .container article .inner .item .category ul {
     list-style: none;
   }
-  /* line 97, ../../sass/style.scss */
+  /* line 88, ../../sass/style.scss */
+  body .container article .inner .item .category ul li {
+    margin: 10px 0;
+  }
+  /* line 90, ../../sass/style.scss */
+  body .container article .inner .item .category ul li:nth-child(n+2) {
+    display: block;
+    margin-bottom: 10px;
+  }
+  /* line 104, ../../sass/style.scss */
   body .container article .inner .back {
     position: fixed;
     right: 30px;
