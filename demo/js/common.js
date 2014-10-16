@@ -43,7 +43,7 @@
 									$("#game").append(topvw.render().el);
 									break;
 									case 3 :
-										$("#daily").append(topvw.render	.el);
+										$("#daily").append(topvw.render().el);
 										break;
 										case 4 :
 								$("#accessories").append(topvw.render().el);
