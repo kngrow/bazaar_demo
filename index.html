@@ -8,7 +8,29 @@
 body {
   text-align:center;
     font-size:250px;
+    background: linear-gradient(270deg, #010201, #0e120e, #606760, #939693, #9ba19b, #6b6c6b, #343434, #090909);
+background-size: 1600% 1600%;
+
+-webkit-animation: AnimationName 2s ease infinite;
+-moz-animation: AnimationName 2s ease infinite;
+animation: AnimationName 2s ease infinite;
 }
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 
 .rainbowText {
     display:inline-block;
