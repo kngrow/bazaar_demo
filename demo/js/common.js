@@ -97,7 +97,6 @@ $.get('./hogehoge.json')
                 $("#daily").parent().show();
                 $("#game").parent().show();
                 $("#accessories").parent().show();
-
             },
             ro_audio : function(){
                 console.log("audio");
@@ -105,6 +104,7 @@ $.get('./hogehoge.json')
                 $("#daily").parent().hide();
                 $("#game").parent().hide();
                 $("#accessories").parent().hide();
+                $("#audio").children().css("display",block);
             },
             ro_game : function(){
                 console.log("g");
@@ -112,6 +112,7 @@ $.get('./hogehoge.json')
                 $("#daily").parent().hide();
                 $("#audio").parent().hide();
                 $("#accessories").parent().hide();
+                $("#game").children().css("display",block);
             },
             ro_dialy : function(){
                 console.log("d");
@@ -119,12 +120,14 @@ $.get('./hogehoge.json')
                 $("#audio").parent().hide();
                 $("#game").parent().hide();
                 $("#accessories").parent().hide();
+                $("#daily").children().css("display",block);
             },
             ro_acc : function(){
                 $("#accessories").parent().show();
                 $("#daily").parent().hide();
                 $("#game").parent().hide();
                 $("#audio").parent().hide();
+                $("#accessories").children().css("display",block);
             }
         });
 
