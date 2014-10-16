@@ -128,6 +128,7 @@
 							var router = new Router();
 							Backbone.history.start();
 						});
+            slideShow();
 
 
 /*▼画面上部に戻るボタンのアニメーション*/
@@ -143,10 +144,11 @@ $(function(){
 
 /*▼スライドショー*/
 
-$(function(){
-	$(".slider li").css({left:960});
-	fadein();
-});
+function slideShow(){
+    //setTimeout(function(){
+        fadein();
+    //},100);
+};
 
 var change = 0;
 var n = 0;
@@ -178,9 +180,9 @@ function fadeout(){
 					n++;
 				}
 
-				if(n >= $(".slider li").length){
+				if(n >= $(".slider ul li").length){
 					n = 0;
-					$(".slider li").css({left:960})
+					$(".slider ul li").css({left:960})
 				}
 
 				fadein();

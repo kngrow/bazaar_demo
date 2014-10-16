@@ -249,9 +249,12 @@
 
 <script type="text/template" id="slide_temp">
 
-            <% debugger; %>
             <% for(var i = 0; i < output.length;i++){ %>
-            <li><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup"></li>
+            <% if(i == 0){ %>
+            <li style="left:0px;"><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup" ></li>
+            <% }else{ %>
+            <li style="left:960px;"><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup" ></li>
+            <% } %>
             <% } %>
 
 </script>
