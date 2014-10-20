@@ -2,12 +2,12 @@
 //model
 
 $.get('./hogehoge.json')
-    .done(function(data){
-        debugger;
-        var all = Backbone.Model.extend({});
+.done(function(data){
+    debugger;
+    var all = Backbone.Model.extend({});
 
-        //全部の商品のデータ
-        for(var i = 0 ; i < data.length ; i++){
+    //全部の商品のデータ
+    for(var i = 0 ; i < data.length ; i++){
         var allitem = new all({
             id : data[i].Item.id, //商品id
             name : data[i].Item.item_name, //商品の名前
@@ -30,170 +30,167 @@ $.get('./hogehoge.json')
                 return this ;
             }
         });
-
-
-
         var topvw  = new  topitemsView({ model : allitem});
 
         switch(data[i].Category.id){
-                case 1 :
-                    $("#audio").append(topvw.render().el);
-                    break;
-              case 2 :
+            case 1 :
+                $("#audio").append(topvw.render().el);
+                break;
+                case 2 :
                     $("#game").append(topvw.render().el);
                     break;
                     case 3 :
                         $("#daily").append(topvw.render().el);
                         break;
                         case 4 :
-                $("#accessories").append(topvw.render().el);
-                break;
-        }
+                            $("#accessories").append(topvw.render().el);
+                            break;
+                        }
 
-            // console.log(topvw.render().el );
-            // $("#accessories").append(topvw.render().el);
+                        // console.log(topvw.render().el );
+                        // $("#accessories").append(topvw.render().el);
 
-        }
-
-        var topSliderView = Backbone.View.extend({
-            template : _.template($("#slide_temp").html()),
-            render : function(){
-                var it = this.set(this.model.toJSON());
-                var temp = this.template({ output : it});
-                return temp;
-            },
-            set : function(array){
-                var ret =[];
-
-                _.each(array.item,function(value,key){
-                    if(value.Item.item_leader){
-                        ret[ret.length] = value.Item;
                     }
+
+                    var topSliderView = Backbone.View.extend({
+                        template : _.template($("#slide_temp").html()),
+                        render : function(){
+                            var it = this.set(this.model.toJSON());
+                            var temp = this.template({ output : it});
+                            return temp;
+                        },
+                        set : function(array){
+                            var ret =[];
+
+                            _.each(array.item,function(value,key){
+                                if(value.Item.item_leader){
+                                    ret[ret.length] = value.Item;
+                                }
+                            });
+
+                            return ret;
+                        }
+                    });
+                    var Item = Backbone.Model.extend({});
+                    var items = new Item({
+                        item : data
+                    });
+                    var topsv  = new topSliderView({ model : items});
+                    var template = topsv.render();
+                    $($("section.slider").children("ul")).prepend(template);
+
+
+                    //Router
+                    var Router = Backbone.Router.extend({
+                        routes : {
+                            '' : 'home',
+                            'ro_audio' : 'ro_audio',
+                            'ro_game' : 'ro_game',
+                            'ro_dialy' : 'ro_dialy',
+                            'ro_acc' : 'ro_acc'
+                        },
+                        home : function(){
+                            $("#audio").parent().show();
+                            $("#daily").parent().show();
+                            $("#game").parent().show();
+                            $("#accessories").parent().show();
+                        },
+                        ro_audio : function(){
+                            console.log("audio");
+                            $("#audio").parent().show();
+                            $("#daily").parent().hide();
+                            $("#game").parent().hide();
+                            $("#accessories").parent().hide();
+                            $("#audio").children().css("display",block);
+                        },
+                        ro_game : function(){
+                            console.log("g");
+                            $("#game").parent().show();
+                            $("#daily").parent().hide();
+                            $("#audio").parent().hide();
+                            $("#accessories").parent().hide();
+                            $("#game").children().css("display",block);
+                        },
+                        ro_dialy : function(){
+                            console.log("d");
+                            $("#daily").parent().show();
+                            $("#audio").parent().hide();
+                            $("#game").parent().hide();
+                            $("#accessories").parent().hide();
+                            $("#daily").children().css("display",block);
+                        },
+                        ro_acc : function(){
+                            $("#accessories").parent().show();
+                            $("#daily").parent().hide();
+                            $("#game").parent().hide();
+                            $("#audio").parent().hide();
+                            $("#accessories").children().css("display",block);
+                        }
+                    });
+
+                    var router = new Router();
+                    Backbone.history.start();
+                    slideShow();
                 });
 
-                return ret;
-            }
-        });
-        var Item = Backbone.Model.extend({});
-        var items = new Item({
-            item : data
-        });
-        var topsv  = new topSliderView({ model : items});
-        var template = topsv.render();
-        $($("section.slider").children("ul")).prepend(template);
 
 
-        //Router
-        var Router = Backbone.Router.extend({
-            routes : {
-                        '' : 'home',
-                        'ro_audio' : 'ro_audio',
-                        'ro_game' : 'ro_game',
-                        'ro_dialy' : 'ro_dialy',
-                        'ro_acc' : 'ro_acc'
-            },
-            home : function(){
-                $("#audio").parent().show();
-                $("#daily").parent().show();
-                $("#game").parent().show();
-                $("#accessories").parent().show();
-            },
-            ro_audio : function(){
-                console.log("audio");
-                $("#audio").parent().show();
-                $("#daily").parent().hide();
-                $("#game").parent().hide();
-                $("#accessories").parent().hide();
-                $("#audio").children().css("display",block);
-            },
-            ro_game : function(){
-                console.log("g");
-                $("#game").parent().show();
-                $("#daily").parent().hide();
-                $("#audio").parent().hide();
-                $("#accessories").parent().hide();
-                $("#game").children().css("display",block);
-            },
-            ro_dialy : function(){
-                console.log("d");
-                $("#daily").parent().show();
-                $("#audio").parent().hide();
-                $("#game").parent().hide();
-                $("#accessories").parent().hide();
-                $("#daily").children().css("display",block);
-            },
-            ro_acc : function(){
-                $("#accessories").parent().show();
-                $("#daily").parent().hide();
-                $("#game").parent().hide();
-                $("#audio").parent().hide();
-                $("#accessories").children().css("display",block);
-            }
-        });
-
-        var router = new Router();
-        Backbone.history.start();
-        slideShow();
-    });
+                /*▼画面上部に戻るボタンのアニメーション*/
+                $(function(){
+                    $(".item .back").on("touchend click",function(){
+                        $("html body").animate({scrollTop:0},'slow');
+                        return false;
+                    });
 
 
-
-/*▼画面上部に戻るボタンのアニメーション*/
-$(function(){
-	$(".item .back").on("touchend click",function(){
-		$("html body").animate({scrollTop:0},'slow');
-		return false;
-	});
+                });
 
 
-});
+                /*▼スライドショー*/
 
+                function slideShow(){
+                    //setTimeout(function(){
+                    fadein();
+                    //},100);
+                };
 
-/*▼スライドショー*/
+                var change = 0;
+                var n = 0;
 
-function slideShow(){
-    //setTimeout(function(){
-        fadein();
-    //},100);
-};
+                /*▼フェードインの設定*/
+                function fadein(){
+                    $(".slider ul li").eq(n).animate({
+                        left:0},
+                        {
+                            duration:1000,
+                            complete:function(){
+                                setTimeout(function(){
+                                    fadeout();
+                                },3000);
+                            }
 
-var change = 0;
-var n = 0;
+                        }
+                    );
+                }
 
-/*▼フェードインの設定*/
-function fadein(){
-	$(".slider ul li").eq(n).animate({
-		left:0},
-		{
-			duration:1000,
-			complete:function(){
-				setTimeout(function(){
-					fadeout();
-							},3000);
-			}
+                /*▼フェードアウトの設定*/
+                function fadeout(){
+                    $(".slider ul li").eq(n).animate({
+                        left:-960},
+                        {
+                            duration:1000,
+                            complete:function(){
+                                if(change == 0){
+                                    n++;
+                                }
 
-		}
-	);
-}
+                                if(n >= $(".slider ul li").length){
+                                    n = 0;
+                                    $(".slider ul li").css({left:960})
+                                }
 
-/*▼フェードアウトの設定*/
-function fadeout(){
-	$(".slider ul li").eq(n).animate({
-		left:-960},
-		{
-			duration:1000,
-			complete:function(){
-				if(change == 0){
-					n++;
-				}
-
-				if(n >= $(".slider ul li").length){
-					n = 0;
-					$(".slider ul li").css({left:960})
-				}
-
-				fadein();
-			}
-		}
-	);
-}
+                                fadein();
+                            }
+                        }
+                    );
+                }

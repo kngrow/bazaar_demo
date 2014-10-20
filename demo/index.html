@@ -1,118 +1,112 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" />
-<title>free market</title>
-<link rel="stylesheet" type="text/css" href="css/common.css">
-<link rel="stylesheet" type="text/css" href="css/lightbox.css">
-<link rel="stylesheet" href="css/style.css" />
-<script src="js/underscore.js"></script>
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="js/backbone.js"></script>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>free market</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/backbone.js"></script>
 </head>
-
 <body>
-<div class="container">
-<header>
-	<div class="inner">
-		<h1 id="top"><a href=""><img src="images/bazar_top.png" alt="free market" ></a></h1>
-    </div><!--/.inner-->
-</header>
-<nav class="clearfix">
-	<div class="inner">
-    	<ul>
-    		<li><a href="#ro_audio">ELECTRICITY</a></li>
-    		<li><a href="#ro_game">GAME<span>/</span>HOBBY</a></li>
-    		<li><a href="#ro_dialy">DAILY</a></li>
-    		<li><a href="#ro_acc">ACCESSORIES<span>/</span>BOOKS</a></li>
-    	</ul>
-    </div><!--/.inner-->
-</nav>
-<article>
-	<div class="inner">
-    	<section class="slider">
-        <ul>
-        	<ul id="slide">
-          </ul>
-        </ul>
-              <!--<li><img src="images/a.jpg" alt="pickup" class="picup"></li>-->
-                <!--<li><img src="images/b.jpg" alt="pickup" class="picup"></li>-->
-                <!--<li><img src="images/c.jpg" alt="pickup" class="picup"></li>-->
-                <!--<li><img src="images/d.jpg" alt="pickup" class="picup"></li>-->
-                <div class="sentence">
+    <div class="container">
+        <header>
+            <div class="inner">
+                <h1 id="top"><a href=""><img src="images/bazar_top.png" alt="free market" ></a></h1>
+            </div><!--/.inner-->
+        </header>
+        <nav class="clearfix">
+            <div class="inner">
+                <ul>
+                    <li><a href="#ro_audio">ELECTRICITY</a></li>
+                    <li><a href="#ro_game">GAME<span>/</span>HOBBY</a></li>
+                    <li><a href="#ro_dialy">DAILY</a></li>
+                    <li><a href="#ro_acc">ACCESSORIES<span>/</span>BOOKS</a></li>
+                </ul>
+            </div><!--/.inner-->
+        </nav>
+        <article>
+            <div class="inner">
+                <section class="slider">
+                    <ul>
+                        <ul id="slide">
+                        </ul>
+                    </ul>
+                    <!--<li><img src="images/a.jpg" alt="pickup" class="picup"></li>-->
+                    <!--<li><img src="images/b.jpg" alt="pickup" class="picup"></li>-->
+                    <!--<li><img src="images/c.jpg" alt="pickup" class="picup"></li>-->
+                    <!--<li><img src="images/d.jpg" alt="pickup" class="picup"></li>-->
+                    <div class="sentence">
+                        <h3>フリーマーケットめたたぐ市とは・・・</h3>
+                        <p>11月祭でフリーマーケットを開催します。<br />中古品で買うより安いゲーム、マンガ、フィギュアはもちろん、<br />生活必需品や手に入りづらいレアな掘り出し物、珍品等盛りだくさん！<br />是非ともめたたぐフリーマーケットにご来店ください!!<br />また商品についてはHPで詳しく掲載しているので<br />事前に観て検討していただく事も可能となっております。<br />是非ご利用ください。</p>
+                    </div><!--/.sentence-->
+
+                </section><!--/.slider-->
+
+                <!--▼スクリーンサイズのwidthが830p以下になったとき用-->
+                <div class="sentence_2">
                     <h3>フリーマーケットめたたぐ市とは・・・</h3>
                     <p>11月祭でフリーマーケットを開催します。<br />中古品で買うより安いゲーム、マンガ、フィギュアはもちろん、<br />生活必需品や手に入りづらいレアな掘り出し物、珍品等盛りだくさん！<br />是非ともめたたぐフリーマーケットにご来店ください!!<br />また商品についてはHPで詳しく掲載しているので<br />事前に観て検討していただく事も可能となっております。<br />是非ご利用ください。</p>
                 </div><!--/.sentence-->
+                <!--▲スクリーンサイズのwidthが830p以下になったとき用-->
 
-        </section><!--/.slider-->
+                <section class="item">
+                    <div class="category clearfix">
+                        <h2>ELECTRICITY<span class="sub_title">電子機器</span></h2>
+                        <ul class="clearfix" id="audio">
+                        </ul>
+                    </div><!--/.category-->
+                    <div class="category clearfix" >
+                        <h2>GAME<span>/</span>HOBBY<span class="sub_title">ゲーム・おもちゃ</span></h2>
+                        <ul id="game">
 
-        <!--▼スクリーンサイズのwidthが830p以下になったとき用-->
-        <div class="sentence_2">
-                <h3>フリーマーケットめたたぐ市とは・・・</h3>
-                <p>11月祭でフリーマーケットを開催します。<br />中古品で買うより安いゲーム、マンガ、フィギュアはもちろん、<br />生活必需品や手に入りづらいレアな掘り出し物、珍品等盛りだくさん！<br />是非ともめたたぐフリーマーケットにご来店ください!!<br />また商品についてはHPで詳しく掲載しているので<br />事前に観て検討していただく事も可能となっております。<br />是非ご利用ください。</p>
-        	</div><!--/.sentence-->
-        <!--▲スクリーンサイズのwidthが830p以下になったとき用-->
+                        </ul>
+                    </div><!--/.category-->
+                    <div class="category clearfix">
+                        <h2>DAILY<span class="sub_title">日用品</span></h2>
+                        <ul class="clearfix" id="daily">
+                        </ul>
+                    </div><!--/.category-->
+                    <div class="category clearfix">
+                        <h2>ACCESSORIES<span>/</span>BOOKS<span class="sub_title">アクセサリー・雑貨</span></h2>
+                        <ul class="clearfix" id="accessories">
 
-        <section class="item">
-        	<div class="category clearfix">
-                <h2>ELECTRICITY<span class="sub_title">電子機器</span></h2>
-                <ul class="clearfix" id="audio">
-                </ul>
-        	</div><!--/.category-->
-            <div class="category clearfix" >
-                <h2>GAME<span>/</span>HOBBY<span class="sub_title">ゲーム・おもちゃ</span></h2>
-                <ul id="game">
-
-                </ul>
-        	</div><!--/.category-->
-            <div class="category clearfix">
-                <h2>DAILY<span class="sub_title">日用品</span></h2>
-                <ul class="clearfix" id="daily">
-                </ul>
-        	</div><!--/.category-->
-            <div class="category clearfix">
-                <h2>ACCESSORIES<span>/</span>BOOKS<span class="sub_title">アクセサリー・雑貨</span></h2>
-                <ul class="clearfix" id="accessories">
-
-                </ul>
-            </div><!--/.category-->
-            <a href=""><img src="images/bazar_go_top.png" alt="back top" class="back"></a>
-        </section><!--/.item-->
-    </div><!--/.inner-->
-</article>
-<footer>
-	<div class="inner">
-    	<img src="images/bazar_bottom.png" alt="footer">
-    </div><!--/.inner-->
-</footer>
-</div><!--/.container-->
+                        </ul>
+                    </div><!--/.category-->
+                    <a href=""><img src="images/bazar_go_top.png" alt="back top" class="back"></a>
+                </section><!--/.item-->
+            </div><!--/.inner-->
+        </article>
+        <footer>
+            <div class="inner">
+                <img src="images/bazar_bottom.png" alt="footer">
+            </div><!--/.inner-->
+        </footer>
+    </div><!--/.container-->
 </body>
 
 <script type="text/template" id="item_temp">
-       <a href="img/item/item_photo/<%- photodir %>/normal_<%- photo %>"  data-lightbox="image-1" data-title="&lt;h3&gt; <%- name %> &lt;/h3&gt; &lt;p&gt; <%- detail %> &lt;/p&gt; &lt;p&gt;値段： <%- price  %>　　個数： <%- stock  %> &lt;/p&gt;">
-           <img src="img/item/item_photo/<%- photodir %>/thumb150_<%- photo %>" alt="写真" class="img">
-             <span class="items">
-               <h3><%- name %></h3>
-                 <P><%- detail %></P>
-             </span>
-         </a>
+    <a href="img/item/item_photo/<%- photodir %>/normal_<%- photo %>"  data-lightbox="image-1" data-title="&lt;h3&gt; <%- name %> &lt;/h3&gt; &lt;p&gt; <%- detail %> &lt;/p&gt; &lt;p&gt;値段： <%- price  %>　　個数： <%- stock  %> &lt;/p&gt;">
+    <img src="img/item/item_photo/<%- photodir %>/thumb150_<%- photo %>" alt="写真" class="img">
+    <span class="items">
+    <h3><%- name %></h3>
+    <P><%- detail %></P>
+</span>
+</a>
 </script>
 
 <script type="text/template" id="slide_temp">
-
-            <% for(var i = 0; i < output.length;i++){ %>
-            <% if(i == 0){ %>
-            <li style="left:0px;"><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup" ></li>
-            <% }else{ %>
+<% for(var i = 0; i < output.length;i++){ %>
+    <% if(i == 0){ %>
+        <li style="left:0px;"><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup" ></li>
+    <% }else{ %>
             <li style="left:960px;"><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup" ></li>
-            <% } %>
-            <% } %>
-
+    <% } %>
+<% } %>
 </script>
-<script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="js/lightbox.min.js"></script>
-
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
 </html>
