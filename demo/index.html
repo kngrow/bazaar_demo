@@ -89,22 +89,16 @@
 </body>
 
 <script type="text/template" id="item_temp">
-    <a href="img/item/item_photo/<%- photodir %>/normal_<%- photo %>"  data-lightbox="image-1" data-title="&lt;h3&gt; <%- name %> &lt;/h3&gt; &lt;p&gt; <%- detail %> &lt;/p&gt; &lt;p&gt;値段： <%- price  %>　　個数： <%- stock  %> &lt;/p&gt;">
-    <img src="img/item/item_photo/<%- photodir %>/thumb150_<%- photo %>" alt="写真" class="img">
-    <span class="items">
-    <h3><%- name %></h3>
-    <P><%- detail %></P>
-</span>
-</a>
+<% for(var j = 0 ; j < items.length ; j++){ %>
+    <a href="img/item/item_photo/<%- items[j].Item.item_photo_dir %>/normal_<%- items[j].Item.item_photo %>"  data-lightbox="image-1" data-title="&lt;h3&gt; <%- items[j].Item.item_name %> &lt;/h3&gt; &lt;p&gt; <%- items[j].Item.item_detail %> &lt;/p&gt; &lt;p&gt;値段： <%- items[j].Item.item_price  %>　　個数： <%- items[j].Item.item_price  %> &lt;/p&gt;">
+        <img src="img/item/item_photo/<%- items[j].Item.item_photo_dir %>/thumb150_<%- items[j].Item.item_photo %>" alt="写真" class="img">
+    </a>
+    <% } %>
 </script>
 
 <script type="text/template" id="slide_temp">
-<% for(var i = 0; i < output.length;i++){ %>
-    <% if(i == 0){ %>
-        <li style="left:0px;"><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup" ></li>
-    <% }else{ %>
-            <li style="left:960px;"><img src="./img/item/item_photo/<%- output[i].item_photo_dir  %>/longBig_<%- output[i].item_photo %>" alt="pickup" class="picup" ></li>
-    <% } %>
+<% for(var i = 0; i < slide_items.length;i++){ %>
+            <li style="left:960px;"><img src="./img/item/item_photo/<%- slide_items[i].Item.item_photo_dir  %>/longBig_<%- slide_items[i].Item.item_photo %>" alt="pickup" class="picup" ></li>
 <% } %>
 </script>
     <script type="text/javascript" src="js/common.js"></script>

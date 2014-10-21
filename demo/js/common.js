@@ -1,140 +1,86 @@
-
-//model
-
-$.get('./hogehoge.json')
-.done(function(data){
-    debugger;
-    var all = Backbone.Model.extend({});
-
-    //全部の商品のデータ
-    for(var i = 0 ; i < data.length ; i++){
-        var allitem = new all({
-            id : data[i].Item.id, //商品id
-            name : data[i].Item.item_name, //商品の名前
-            price : data[i].Item.item_price, //値段
-            detail : data[i].Item.item_detail , //説明
-            photo : data[i].Item.item_photo , //写真の名前
-            photodir : data[i].Item.item_photo_dir ,		//写真の場所
-            stock :data[i].Item.item_stock , //個数
-            category : data[i].Category.category_name, //カテゴリの名前
-            c_id : data[i].Category.id // カテゴリのid
+///モデルの作成
+var bpModel = {
+    ////取得したデータを格納するオブジェクト
+    model: [],
+    ////取得時にアクセスするAPIのURL
+    url: "./hogehoge.json",
+    ////データを取得するメソッド
+    fetch: function () {
+        var that = this;
+        return $.get(this.url)
+        .done(function(data){
+            ////取得したデータを処理
+            debugger;
+            that.model = data;
         });
-
-        //view
-        var topitemsView = Backbone.View.extend({
-            tagName : 'li',
-            template : _.template ($("#item_temp").html() ),
-            render : function(){
-                var top_temp = this.template( this.model.toJSON() );
-                this.$el.html (top_temp);
-                return this ;
+    },
+    getByCatId: function (id) {
+        var result = [];
+        _.each(this.model, function (val, key) {
+            if ( val.Category.id == id ) {
+                result.push(val);
             }
         });
-        var topvw  = new  topitemsView({ model : allitem});
+        return result;
+    },
+    getByleader : function(){
+        var leader = [];
+        _.each( this.model , function(val , key){
+            if( val.Item.item_leader === true){
+                leader.push(val);
+            }
+        });
+        return leader;
 
-        switch(data[i].Category.id){
-            case 1 :
-                $("#audio").append(topvw.render().el);
-                break;
-                case 2 :
-                    $("#game").append(topvw.render().el);
+    }
+};
+
+//view
+var topitemsView = Backbone.View.extend({
+    tagName : 'li',
+    template : _.template ($("#item_temp").html() ),
+    render : function(){
+        for (var id = 1 ; id <= 4 ; id++){
+            var items = this.model.getByCatId(id);
+            debugger;
+            var top_temp = this.template( { items : items } );
+            switch(id){
+                case 1 :
+                    $("#audio").append( top_temp );
+                    break;
+                    case 2 :
+                        $("#game").append(top_temp);
                     break;
                     case 3 :
-                        $("#daily").append(topvw.render().el);
-                        break;
-                        case 4 :
-                            $("#accessories").append(topvw.render().el);
-                            break;
-                        }
+                        $("#daily").append(top_temp);
+                    break;
+                    case 4 :
+                        $("#accessories").append(top_temp);
+                    break;
+            }
+        }
+    }
+});
 
-                        // console.log(topvw.render().el );
-                        // $("#accessories").append(topvw.render().el);
-
-                    }
-
-                    var topSliderView = Backbone.View.extend({
-                        template : _.template($("#slide_temp").html()),
-                        render : function(){
-                            var it = this.set(this.model.toJSON());
-                            var temp = this.template({ output : it});
-                            return temp;
-                        },
-                        set : function(array){
-                            var ret =[];
-
-                            _.each(array.item,function(value,key){
-                                if(value.Item.item_leader){
-                                    ret[ret.length] = value.Item;
-                                }
-                            });
-
-                            return ret;
-                        }
-                    });
-                    var Item = Backbone.Model.extend({});
-                    var items = new Item({
-                        item : data
-                    });
-                    var topsv  = new topSliderView({ model : items});
-                    var template = topsv.render();
-                    $($("section.slider").children("ul")).prepend(template);
+var topSliderView = Backbone.View.extend({
+    template : _.template( $("#slide_temp").html() ),
+    render : function(){
+        var slide_items = this.model.getByleader();
+        debugger;
+        var slide = this.template({ slide_items : slide_items});
+        $($("section.slider").children("ul").children("ul")).append(slide);
+    }
+});
 
 
-                    //Router
-                    var Router = Backbone.Router.extend({
-                        routes : {
-                            '' : 'home',
-                            'ro_audio' : 'ro_audio',
-                            'ro_game' : 'ro_game',
-                            'ro_dialy' : 'ro_dialy',
-                            'ro_acc' : 'ro_acc'
-                        },
-                        home : function(){
-                            $("#audio").parent().show();
-                            $("#daily").parent().show();
-                            $("#game").parent().show();
-                            $("#accessories").parent().show();
-                        },
-                        ro_audio : function(){
-                            console.log("audio");
-                            $("#audio").parent().show();
-                            $("#daily").parent().hide();
-                            $("#game").parent().hide();
-                            $("#accessories").parent().hide();
-                            $("#audio").children().css("display",block);
-                        },
-                        ro_game : function(){
-                            console.log("g");
-                            $("#game").parent().show();
-                            $("#daily").parent().hide();
-                            $("#audio").parent().hide();
-                            $("#accessories").parent().hide();
-                            $("#game").children().css("display",block);
-                        },
-                        ro_dialy : function(){
-                            console.log("d");
-                            $("#daily").parent().show();
-                            $("#audio").parent().hide();
-                            $("#game").parent().hide();
-                            $("#accessories").parent().hide();
-                            $("#daily").children().css("display",block);
-                        },
-                        ro_acc : function(){
-                            $("#accessories").parent().show();
-                            $("#daily").parent().hide();
-                            $("#game").parent().hide();
-                            $("#audio").parent().hide();
-                            $("#accessories").children().css("display",block);
-                        }
-                    });
-
-                    var router = new Router();
-                    Backbone.history.start();
-                    slideShow();
-                });
-
-
-
+var view = new topitemsView({ model: bpModel });
+var sv = new topSliderView({model : bpModel});
+                /////イニシャライズ処理
+bpModel.fetch().done(function (){
+    view.render();
+    sv.render();
+    fadein();
+});
                 /*▼画面上部に戻るボタンのアニメーション*/
                 $(function(){
                     $(".item .back").on("touchend click",function(){
