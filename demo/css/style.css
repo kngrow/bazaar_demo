@@ -32,7 +32,7 @@
   /* line 33, ../../sass/style.scss */
   body .container nav {
     background-color: #FFF;
-    margin: 0;
+    margin: 20px 0 0 0;
     width: 100%;
     max-width: 100%;
   }
@@ -59,7 +59,7 @@
   /* line 59, ../../sass/style.scss */
   body .container article {
     clear: both;
-    padding: 50px 0 0 0;
+    padding: 20px 0 0 0;
     background: #fff;
   }
   /* line 63, ../../sass/style.scss */
