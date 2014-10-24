@@ -239,6 +239,12 @@ article .back{
 	margin: 10px 0 0 0;
 }
 
+article .attention{
+	font-size: 10px;
+	color: #999999;
+	margin: 10px 0 0 0;
+}
+
 footer{
 	min-width: 600px;
 	background: #fff;
