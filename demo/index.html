@@ -89,7 +89,7 @@
 <script type="text/template" id="item_temp">
 <% for(var j = 0 ; j < items.length ; j++){ %>
     <a href="img/item/item_photo/<%- items[j].Item.item_photo_dir %>/normal_<%- items[j].Item.item_photo %>"  data-lightbox="image-1" data-title="&lt;h3&gt; <%- items[j].Item.item_name %> &lt;/h3&gt; &lt;p&gt; <%- items[j].Item.item_detail %> &lt;/p&gt; &lt;p&gt;値段： <%- items[j].Item.item_price  %>　　個数： <%- items[j].Item.item_price  %> &lt;/p&gt;">
-        <img src="img/item/item_photo/<%- items[j].Item.item_photo_dir %>/thumb150_<%- items[j].Item.item_photo %>" alt="写真" class="img">
+        <img src="img/item/item_photo/<%- items[j].Item.item_photo_dir %>/small_<%- items[j].Item.item_photo %>" alt="写真" class="img">
     </a>
     <% } %>
 </script>
