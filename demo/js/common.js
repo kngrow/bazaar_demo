@@ -68,7 +68,7 @@ var topSliderView = Backbone.View.extend({
         var slide_items = this.model.getByleader();
         debugger;
         var slide = this.template({ slide_items : slide_items});
-        $($("section.slider").children("ul").children("ul")).append(slide);
+        $($("section.slider").children("ul")).append(slide);
     }
 });
 
