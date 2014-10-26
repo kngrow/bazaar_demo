@@ -48,19 +48,21 @@ var topitemsView = Backbone.View.extend({
                 case 1 :
                     $("#audio").append( top_temp );
                     break;
-                    case 2 :
-                        $("#game").append(top_temp);
+                case 2 :
+                    $("#game").append(top_temp);
                     break;
-                    case 3 :
-                        $("#daily").append(top_temp);
+                case 3 :
+                    $("#daily").append(top_temp);
                     break;
-                    case 4 :
-                        $("#accessories").append(top_temp);
+                case 4 :
+                    $("#accessories").append(top_temp);
                     break;
             }
         }
     }
 });
+
+
 
 var topSliderView = Backbone.View.extend({
     template : _.template( $("#slide_temp").html() ),
@@ -72,6 +74,52 @@ var topSliderView = Backbone.View.extend({
     }
 });
 
+//Router
+var Router = Backbone.Router.extend({
+    routes : {
+        '' : 'home',
+        'ro_audio' : 'ro_audio',
+        'ro_game' : 'ro_game',
+        'ro_dialy' : 'ro_dialy',
+        'ro_acc' : 'ro_acc'
+    },
+    home : function(){
+        $("#audio").parent().show();
+        $("#daily").parent().show();
+        $("#game").parent().show();
+        $("#accessories").parent().show();
+
+    },
+    ro_audio : function(){
+        console.log("audio");
+        $("#audio").parent().show();
+        $("#daily").parent().hide();
+        $("#game").parent().hide();
+        $("#accessories").parent().hide();
+    },
+    ro_game : function(){
+        console.log("g");
+        $("#game").parent().show();
+        $("#daily").parent().hide();
+        $("#audio").parent().hide();
+        $("#accessories").parent().hide();
+    },
+    ro_dialy : function(){
+        console.log("d");
+        $("#daily").parent().show();
+        $("#audio").parent().hide();
+        $("#game").parent().hide();
+        $("#accessories").parent().hide();
+    },
+    ro_acc : function(){
+        $("#accessories").parent().show();
+        $("#daily").parent().hide();
+        $("#game").parent().hide();
+        $("#audio").parent().hide();
+    }
+});
+
+var router = new Router();
 
 var view = new topitemsView({ model: bpModel });
 var sv = new topSliderView({model : bpModel});
@@ -79,64 +127,69 @@ var sv = new topSliderView({model : bpModel});
 bpModel.fetch().done(function (){
     view.render();
     sv.render();
+    Backbone.history.start();
     fadein();
 });
-                /*▼画面上部に戻るボタンのアニメーション*/
-                $(function(){
-                    $(".item .back").on("touchend click",function(){
-                        $("html body").animate({scrollTop:0},'slow');
-                        return false;
-                    });
 
 
-                });
 
 
-                /*▼スライドショー*/
+/*▼画面上部に戻るボタンのアニメーション*/
+$(function(){
+    $(".item .back").on("touchend click",function(){
+        $("html body").animate({scrollTop:0},'slow');
+        return false;
+    });
 
-                function slideShow(){
-                    //setTimeout(function(){
-                    fadein();
-                    //},100);
-                };
 
-                var change = 0;
-                var n = 0;
+});
 
-                /*▼フェードインの設定*/
-                function fadein(){
-                    $(".slider ul li").eq(n).animate({
-                        left:0},
-                        {
-                            duration:1000,
-                            complete:function(){
-                                setTimeout(function(){
-                                    fadeout();
-                                },3000);
-                            }
 
-                        }
-                    );
+/*▼スライドショー*/
+
+function slideShow(){
+    //setTimeout(function(){
+    fadein();
+    //},100);
+};
+
+var change = 0;
+var n = 0;
+
+/*▼フェードインの設定*/
+function fadein(){
+    $(".slider ul li").eq(n).animate({
+        left:0},
+        {
+            duration:1000,
+            complete:function(){
+                setTimeout(function(){
+                    fadeout();
+                },3000);
+            }
+
+        }
+    );
+}
+
+/*▼フェードアウトの設定*/
+function fadeout(){
+    $(".slider ul li").eq(n).animate({
+        left:-960},
+        {
+            duration:1000,
+            complete:function(){
+                if(change == 0){
+                    n++;
                 }
 
-                /*▼フェードアウトの設定*/
-                function fadeout(){
-                    $(".slider ul li").eq(n).animate({
-                        left:-960},
-                        {
-                            duration:1000,
-                            complete:function(){
-                                if(change == 0){
-                                    n++;
-                                }
-
-                                if(n >= $(".slider ul li").length){
-                                    n = 0;
-                                    $(".slider ul li").css({left:960})
-                                }
-
-                                fadein();
-                            }
-                        }
-                    );
+                if(n >= $(".slider ul li").length){
+                    n = 0;
+                    $(".slider ul li").css({left:960})
                 }
+
+                fadein();
+            }
+        }
+    );
+}
