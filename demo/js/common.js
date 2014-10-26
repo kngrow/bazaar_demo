@@ -14,14 +14,22 @@ var bpModel = {
             that.model = data;
         });
     },
-    getByCatId: function (id) {
+    getByCatId: function (id,flag) {
         var result = [];
+        var ret = [];
         _.each(this.model, function (val, key) {
             if ( val.Category.id == id ) {
                 result.push(val);
             }
+            if(flag){
+                ret = result;
+            }else{
+                ret = _.shuffle(result);
+            }
+
+            //console.log();
         });
-        return result;
+        return ret;
     },
     getByleader : function(){
         var leader = [];
@@ -39,9 +47,19 @@ var bpModel = {
 var topitemsView = Backbone.View.extend({
     tagName : 'li',
     template : _.template ($("#item_temp").html() ),
-    render : function(){
+    render : function(flag){
+        $("#audio").empty();
+        $("#daily").empty();
+        $("#game").empty();
+        $("#accessories").empty();
         for (var id = 1 ; id <= 4 ; id++){
-            var items = this.model.getByCatId(id);
+            var items;
+            if(flag){
+                items = this.model.getByCatId(id,true);
+            }else{
+                items = this.model.getByCatId(id,false);
+            }
+
             debugger;
             var top_temp = this.template( { items : items } );
             switch(id){
@@ -84,38 +102,48 @@ var Router = Backbone.Router.extend({
         'ro_acc' : 'ro_acc'
     },
     home : function(){
+        view.render(false);
         $("#audio").parent().show();
         $("#daily").parent().show();
         $("#game").parent().show();
         $("#accessories").parent().show();
+        $("article .item .category li").addClass("none");
 
     },
     ro_audio : function(){
+        view.render(true);
         console.log("audio");
         $("#audio").parent().show();
         $("#daily").parent().hide();
         $("#game").parent().hide();
         $("#accessories").parent().hide();
+        $("article .item .category li").removeClass("none");
     },
     ro_game : function(){
+        view.render(true);
         console.log("g");
         $("#game").parent().show();
         $("#daily").parent().hide();
         $("#audio").parent().hide();
         $("#accessories").parent().hide();
+        $("article .item .category li").removeClass("none");
     },
     ro_dialy : function(){
+        view.render(true);
         console.log("d");
         $("#daily").parent().show();
         $("#audio").parent().hide();
         $("#game").parent().hide();
         $("#accessories").parent().hide();
+        $("article .item .category li").removeClass("none");
     },
     ro_acc : function(){
+        view.render(true);
         $("#accessories").parent().show();
         $("#daily").parent().hide();
         $("#game").parent().hide();
         $("#audio").parent().hide();
+        $("article .item .category li").removeClass("none");
     }
 });
 
@@ -125,7 +153,7 @@ var view = new topitemsView({ model: bpModel });
 var sv = new topSliderView({model : bpModel});
                 /////イニシャライズ処理
 bpModel.fetch().done(function (){
-    view.render();
+    //view.render();
     sv.render();
     Backbone.history.start();
     fadein();
