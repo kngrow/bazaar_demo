@@ -10,7 +10,7 @@ var bpModel = {
         return $.get(this.url)
         .done(function(data){
             ////取得したデータを処理
-            debugger;
+            //debugger;
             that.model = data;
         });
     },
@@ -60,7 +60,7 @@ var topitemsView = Backbone.View.extend({
                 items = this.model.getByCatId(id,false);
             }
 
-            debugger;
+            //debugger;
             var top_temp = this.template( { items : items } );
             switch(id){
                 case 1 :
@@ -86,7 +86,7 @@ var topSliderView = Backbone.View.extend({
     template : _.template( $("#slide_temp").html() ),
     render : function(){
         var slide_items = this.model.getByleader();
-        debugger;
+        //debugger;
         var slide = this.template({ slide_items : slide_items});
         $($("section.slider").children("ul")).append(slide);
     }
@@ -112,7 +112,7 @@ var Router = Backbone.Router.extend({
     },
     ro_audio : function(){
         view.render(true);
-        console.log("audio");
+        //console.log("audio");
         $("#audio").parent().show();
         $("#daily").parent().hide();
         $("#game").parent().hide();
@@ -121,7 +121,7 @@ var Router = Backbone.Router.extend({
     },
     ro_game : function(){
         view.render(true);
-        console.log("g");
+        //console.log("g");
         $("#game").parent().show();
         $("#daily").parent().hide();
         $("#audio").parent().hide();
@@ -130,7 +130,7 @@ var Router = Backbone.Router.extend({
     },
     ro_dialy : function(){
         view.render(true);
-        console.log("d");
+        //console.log("d");
         $("#daily").parent().show();
         $("#audio").parent().hide();
         $("#game").parent().hide();
