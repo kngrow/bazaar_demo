@@ -168,6 +168,18 @@ $(function(){
         $("html body").animate({scrollTop:0},'slow');
         return false;
     });
+    $("#audio").prev("h2").on("touchend click",function(){
+        location.href = "#ro_audio";
+    });
+    $("#game").prev("h2").on("touchend click",function(){
+        location.href = "#ro_game";
+    });
+    $("#daily").prev("h2").on("touchend click",function(){
+        location.href = "#ro_dialy";
+    });
+    $("#accessories").prev("h2").on("touchend click",function(){
+        location.href = "#ro_acc";
+    });
 
 
 });
