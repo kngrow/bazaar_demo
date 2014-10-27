@@ -94,11 +94,6 @@
   body .container article .inner .item .category ul li {
     margin: 10px 0;
   }
-  /* line 89, ../../sass/style.scss */
-  body .container article .inner .item .category ul li:nth-child(n+2) {
-    display: block;
-    margin-bottom: 10px;
-  }
   /* line 103, ../../sass/style.scss */
   body .container article .inner .back {
     position: fixed;
