@@ -32,7 +32,7 @@ background-color: #eee;
 
     nav {
       background-color : #FFF;
-      margin : 0;
+      padding-top : 20px;
       width : 100%;
       max-width :100%;
       .inner {
@@ -73,7 +73,6 @@ background-color: #eee;
          border-bottom: #bbb solid 1px;
          color: #6099a4;
          font-size: 20px;
-         padding-left : 20px;
          .sub_title {
            padding-left: 7px;
            font-size: 12px;
