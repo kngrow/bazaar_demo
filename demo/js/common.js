@@ -3,15 +3,13 @@ var bpModel = {
     ////取得したデータを格納するオブジェクト
     model: [],
     ////取得時にアクセスするAPIのURL
-    url: "./hogehoge.json",
+    url: "http://metaregi.me-ta-tag.com/items/metaread",
     ////データを取得するメソッド
     fetch: function () {
         var that = this;
-        return $.get(this.url)
-        .done(function(data){
-            ////取得したデータを処理
-            //debugger;
-            that.model = data;
+
+        return $.post("js/proxy.php",{URL:that.url},function(data){
+          that.model = data;
         });
     },
     getByCatId: function (id,flag) {
@@ -154,9 +152,9 @@ var sv = new topSliderView({model : bpModel});
                 /////イニシャライズ処理
 bpModel.fetch().done(function (){
     //view.render();
-    sv.render();
-    Backbone.history.start();
-    fadein();
+sv.render();
+Backbone.history.start();
+fadein();
 });
 
 
