@@ -7,9 +7,19 @@ var bpModel = {
   ////データを取得するメソッド
   fetch: function () {
     var that = this;
-    return $.post("js/proxy.php",{URL:that.url},function(data){
-      that.model = data;
+    $("#loading").addClass("loading");
+    return $.ajax({
+        type: 'post',
+        url :  'js/proxy.php',
+        data : { URL : that.url },
+        success :function(data){
+          that.model = data;
+        },
+        complete : function(data){
+        }
+
     });
+
   },
   getByCatId: function (id,flag) {
     var result = [];
@@ -149,14 +159,14 @@ var topitemsView = Backbone.View.extend({
         var view = new topitemsView({ model: bpModel });
         var sv = new topSliderView({model : bpModel});
         /////イニシャライズ処理
-        bpModel.fetch().done(function (){
-          //view.render();
-          sv.render();
-          Backbone.history.start();
-          fadein();
+
+          bpModel.fetch().done(function (){
+            //view.render();
+            sv.render();
+            Backbone.history.start();
+            fadein();
+            
         });
-
-
 
 
         /*▼画面上部に戻るボタンのアニメーション*/
