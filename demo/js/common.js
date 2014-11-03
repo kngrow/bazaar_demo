@@ -89,6 +89,7 @@ var topitemsView = Backbone.View.extend({
 
 
 
+
         var topSliderView = Backbone.View.extend({
           template : _.template( $("#slide_temp").html() ),
           render : function(){
@@ -165,7 +166,7 @@ var topitemsView = Backbone.View.extend({
             sv.render();
             Backbone.history.start();
             fadein();
-            
+
         });
 
 
