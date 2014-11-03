@@ -3,7 +3,7 @@ var bpModel = {
   ////取得したデータを格納するオブジェクト
   model: [],
   ////取得時にアクセスするAPIのURL
-  url: "http://metaregi.me-ta-tag.com/items/metaread",
+  url: "hogehoge",
   ////データを取得するメソッド
   fetch: function () {
     var that = this;
