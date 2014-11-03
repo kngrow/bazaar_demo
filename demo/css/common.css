@@ -228,6 +228,11 @@ article .item .category li{
 	overflow: hidden;
 	margin: 20px 0 30px 50px;
 	float: left;
+	position: relative;
+}
+article .item .category li img {
+	position : absolute;
+	top:0;
 }
 
 /*article .item .category li:nth-child(4n+1) {*/

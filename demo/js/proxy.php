@@ -3,7 +3,8 @@ header("Content-Type:application/json");
 /* URLが指すXMLコンテンツを取得して返す（Ajaxの中継用）*/
 if(isset($_POST['URL'])){
     if("hogehoge"==$_POST['URL']){
-        $url="http://metaregi.me-ta-tag.com/pages/metaread";
+        //$url="http://metaregi.me-ta-tag.com/pages/metaread";
+        $url ="../hogehoge.json";
         echo file_get_contents($url);
     }
 }
