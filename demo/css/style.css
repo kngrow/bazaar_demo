@@ -29,212 +29,87 @@
   body .container header .inner #top {
     width: 100%;
   }
-  /* line 33, ../../sass/style.scss */
+  /* line 32, ../../sass/style.scss */
   body .container nav {
     background-color: #FFF;
     padding-top: 20px;
     width: 100%;
     max-width: 100%;
   }
-  /* line 38, ../../sass/style.scss */
+  /* line 37, ../../sass/style.scss */
   body .container nav .inner {
     margin: auto;
   }
-  /* line 42, ../../sass/style.scss */
+  /* line 40, ../../sass/style.scss */
   body .container nav ul {
     list-style: none;
     padding: 0;
   }
-  /* line 45, ../../sass/style.scss */
+  /* line 43, ../../sass/style.scss */
   body .container nav ul li {
     float: left;
     padding-left: 15%;
   }
-  /* line 48, ../../sass/style.scss */
+  /* line 46, ../../sass/style.scss */
   body .container nav ul li a {
     letter-spacing: 0.2em;
     text-decoration: none;
     color: #6099a4;
   }
-  /* line 59, ../../sass/style.scss */
+  /* line 54, ../../sass/style.scss */
   body .container article {
     clear: both;
     padding: 50px 0 0 0;
     background: #fff;
   }
-  /* line 63, ../../sass/style.scss */
+  /* line 58, ../../sass/style.scss */
   body .container article .inner {
     margin: auto;
   }
-  /* line 66, ../../sass/style.scss */
+  /* line 60, ../../sass/style.scss */
   body .container article .inner .sentence_2 {
     margin-top: 0;
   }
-  /* line 72, ../../sass/style.scss */
+  /* line 65, ../../sass/style.scss */
   body .container article .inner .item .category h2 {
     border-bottom: #bbb solid 1px;
     color: #6099a4;
     font-size: 20px;
   }
-  /* line 76, ../../sass/style.scss */
+  /* line 69, ../../sass/style.scss */
   body .container article .inner .item .category h2 .sub_title {
     padding-left: 7px;
     font-size: 12px;
     color: #888;
   }
-  /* line 81, ../../sass/style.scss */
+  /* line 74, ../../sass/style.scss */
   body .container article .inner .item .category h2:last-child {
     font-size: 100%;
   }
-  /* line 85, ../../sass/style.scss */
+  /* line 78, ../../sass/style.scss */
   body .container article .inner .item .category ul {
     list-style: none;
   }
-  /* line 87, ../../sass/style.scss */
+  /* line 80, ../../sass/style.scss */
   body .container article .inner .item .category ul li {
     margin: 10px 0;
+    position: relative;
   }
-  /* line 103, ../../sass/style.scss */
+  /* line 83, ../../sass/style.scss */
+  body .container article .inner .item .category ul li img {
+    position: absolute;
+    top: 0;
+  }
+  /* line 92, ../../sass/style.scss */
   body .container article .inner .back {
     position: fixed;
     right: 30px;
     bottom: 130px;
   }
+  /* line 100, ../../sass/style.scss */
+  body .loading {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+  }
 }
-/*
-h1{
-font-size:150%;
-}
-
-.space1{
-margin-top:15%;
-}
-
-.logo{
-width:25%;
-height:7%;
-margin-top:3%;
-margin-right:35%;
-}
-
-.title{
-text-align:center;
-margin-top:-15%;
-margin-left:30%;
-}
-
-.goods{
-min-height:150px;
-margin-right:2%;
-margin-left:2%;
-background-color:#FEF898;
-}
-
-.category{
-float:left;
-width:90%;
-min-height:100px;
-margin-top:1%;
-margin-right:4%;
-margin-left:4%;
-margin-bottom:1%;
-background-color:#F29BA1;
-}
-
-.space{
-padding:1.5%;
-}
-
-.info{
-min-height:70px;
-margin-right:2%;
-margin-left:2%;
-background-color:#D5D7D6;
-}
-
-.link{
-background-color:#CCE299;
-}
-
-
-small{
-display:inline-block;
-width:100%;
-text-align:center;
-}
-}
-
-
-
-@media screen and (min-width:480px){
-body{
-width:100%;
-line-height:1.5;
-margin:0;
-padding:0;
-background-color:#FFFAF0;
-}
-
-h1{
-font-size:300%;
-}
-
-.mozi{
-font-size:150%;
-}
-
-.space1{
-margin-top:20%;
-}
-
-.logo{
-width:25%;
-height:7%;
-margin-top:3%;
-margin-right:35%;
-}
-
-.title{
-text-align:center;
-margin-top:-15%;
-margin-left:30%;
-}
-
-.goods{
-min-height:330px;
-margin-right:2%;
-margin-left:2%;
-background-color:#FEF898;
-}
-
-.category{
-float:left;
-width:48%;
-min-height:100px;
-margin:1%;
-background-color:#F29BA1;
-}
-
-.space{
-padding:1.5%;
-}
-
-.info{
-min-height:200px;
-margin-right:2%;
-margin-left:2%;
-margin-top:4%;
-background-color:#D5D7D6;
-}
-
-.link{
-background-color:#CCE299;
-}
-
-
-small{
-display:inline-block;
-width:100%;
-text-align:center;
-}
-}*/
