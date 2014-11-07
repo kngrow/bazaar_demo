@@ -13,6 +13,9 @@ var bpModel = {
         url :  'js/proxy.php',
         data : { URL : that.url },
         success :function(data){
+            _.sortBy(data , function(item){
+              return  item;
+            });
           that.model = data;
         },
         complete : function(data){
@@ -30,8 +33,16 @@ var bpModel = {
       }
       if(flag){
         ret = result;
+        ret = _.sortBy(result,function(num){
+            return num.Item.item_stock;
+        });
       }else{
-        ret = _.shuffle(result);
+        // ret = _.shuffle(result);
+        ret = result;
+
+        ret = _.sortBy(result,function(num){
+            return num;
+        });
       }
 
       //console.log();
@@ -63,11 +74,23 @@ var topitemsView = Backbone.View.extend({
       var items;
       if(flag){
         items = this.model.getByCatId(id,true);
+
       }else{
         items = this.model.getByCatId(id,false);
+
+        var only = _.sortBy(items ,function(i){
+            return i.Item.item_stock != 0;
+        });
+        items = _.shuffle(only);
       }
 
-      //debugger;
+        items = _.sortBy(items ,function(num){
+            return num.Item.item_stock;
+        });
+
+        items.reverse();
+
+
       var top_temp = this.template( { items : items } );
       switch(id){
         case 1 :
