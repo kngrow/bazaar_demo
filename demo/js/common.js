@@ -82,6 +82,7 @@ var topitemsView = Backbone.View.extend({
             return i.Item.item_stock != 0;
         });
         items = _.shuffle(only);
+        
       }
 
         items = _.sortBy(items ,function(num){
